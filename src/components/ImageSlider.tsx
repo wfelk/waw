@@ -23,11 +23,11 @@ export default function ImageSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const prev = useCallback(() => {
-    setCurrent((c) => (c === 0 ? SLIDE_COUNT - 1 : c - 1));
+    setCurrent((c) => (c > 0 ? c - 1 : c));
   }, []);
 
   const next = useCallback(() => {
-    setCurrent((c) => (c === SLIDE_COUNT - 1 ? 0 : c + 1));
+    setCurrent((c) => (c < SLIDE_COUNT - 1 ? c + 1 : c));
   }, []);
 
   const getClientX = (e: React.TouchEvent | React.MouseEvent) => {
