@@ -1,65 +1,79 @@
 import Image from "next/image";
 
+const contactLinks = [
+  { href: "tel:+49XXXXXXXXX", label: "Anrufen", icon: "/images/phone-icon.svg", alt: "Telefon", size: 42 },
+  { href: "mailto:info@waw-automobile.de", label: "E-Mail senden", icon: "/images/mail-icon.svg", alt: "E-Mail", size: 30 },
+  { href: "https://wa.me/49XXXXXXXXX", label: "WhatsApp", icon: "/images/whatsapp-icon.svg", alt: "WhatsApp", size: 38, external: true },
+];
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="mx-auto flex min-h-screen max-w-[402px] flex-col font-sans">
+      <header className="relative z-10 flex h-[98px] items-center justify-between bg-white pr-4">
+        <div className="relative h-[80px] w-[160px] shrink-0">
+          <Image
+            src="/images/waw-logo.svg"
+            alt="WAW Automobile Logo"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
+        <button aria-label="Menü öffnen" className="p-2">
+          <Image src="/images/menu-icon.svg" alt="" width={33} height={22} />
+        </button>
+      </header>
+
+      <section className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222]">
+        <div className="pointer-events-none absolute -left-[242px] top-0 h-[693px] w-[693px]">
+          <Image
+            src="/images/gradient-car.png"
+            alt="Fahrzeug"
+            fill
+            className="-scale-x-100 object-cover"
+            priority
+          />
+        </div>
+
+        <div className="relative z-10 mt-[-49px] flex flex-col items-center">
+          <div className="relative h-[287px] w-[287px]">
+            <Image src="/images/waw-logo.png" alt="WAW" fill className="object-contain" />
+          </div>
+          <p className="font-(family-name:--font-alumni) -mt-28 text-[29.6px] font-semibold uppercase tracking-[17.75px] text-waw-green">
+            Automobile
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="relative z-10 mt-4 text-center text-[15px] font-light text-white">
+          <p>Gebrauchtwagen. Unfallwagen.</p>
+          <p>(Fahrzeugteile?). Reifen-Umziehservice.</p>
         </div>
-      </main>
+
+        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8">
+          <a
+            href="#inserate"
+            className="flex h-[79px] w-[338px] items-center justify-center rounded-[30px] bg-waw-green text-[20px] font-semibold text-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] transition-opacity hover:opacity-90"
+          >
+            Verfügbare Inserate
+          </a>
+
+          <nav className="flex h-[79px] w-[338px] items-center justify-evenly rounded-[30px] bg-waw-green shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+            {contactLinks.map(({ href, label, icon, alt, size, external }) => (
+              <a
+                key={label}
+                href={href}
+                aria-label={label}
+                className="transition-opacity hover:opacity-80"
+                {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+              >
+                <Image src={icon} alt={alt} width={size} height={size} />
+              </a>
+            ))}
+          </nav>
+        </div>
+      </section>
+
+      <div className="mx-auto h-[7px] w-full max-w-[416px] rounded-[20px] bg-black" />
     </div>
   );
 }
