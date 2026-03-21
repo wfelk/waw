@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SideMenu from "@/components/SideMenu";
 
 const contactLinks = [
   { href: "tel:+49XXXXXXXXX", label: "Anrufen", icon: "/images/phone-icon.svg", alt: "Telefon", size: 42 },
@@ -19,12 +20,10 @@ export default function Start() {
             priority
           />
         </div>
-        <button aria-label="Menü öffnen" className="p-2">
-          <Image src="/images/menu-icon.svg" alt="" width={33} height={22} />
-        </button>
+        <SideMenu />
       </header>
 
-      <section className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222]">
+      <section id="start" className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222]">
         <div className="pointer-events-none absolute -left-[242px] top-0 h-[693px] w-[693px]">
           <Image
             src="/images/gradient-car.png"
