@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 
 const SLIDE_COUNT = 8;
 
@@ -17,6 +17,10 @@ const PLACEHOLDER_COLORS = [
 
 export default function ImageSlider() {
   const [current, setCurrent] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const startX = useRef(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const prev = useCallback(() => {
     setCurrent((c) => (c === 0 ? SLIDE_COUNT - 1 : c - 1));
@@ -26,20 +30,64 @@ export default function ImageSlider() {
     setCurrent((c) => (c === SLIDE_COUNT - 1 ? 0 : c + 1));
   }, []);
 
+  const getClientX = (e: React.TouchEvent | React.MouseEvent) => {
+    if ("touches" in e) return e.touches[0].clientX;
+    return e.clientX;
+  };
+
+  const handleDragStart = (e: React.TouchEvent | React.MouseEvent) => {
+    setIsDragging(true);
+    startX.current = getClientX(e);
+    setDragOffset(0);
+  };
+
+  const handleDragMove = (e: React.TouchEvent | React.MouseEvent) => {
+    if (!isDragging) return;
+    const currentX = "touches" in e ? e.touches[0].clientX : e.clientX;
+    setDragOffset(currentX - startX.current);
+  };
+
+  const handleDragEnd = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    const threshold = 50;
+    if (dragOffset < -threshold) {
+      next();
+    } else if (dragOffset > threshold) {
+      prev();
+    }
+    setDragOffset(0);
+  };
+
+  const slideWidth = containerRef.current?.offsetWidth ?? 300;
+  const translateX = -(current * slideWidth) + dragOffset;
+
   return (
     <div className="flex flex-col items-center gap-4">
       {/* Slider */}
       <div className="relative w-[300px] h-[220px]">
         {/* Slides */}
-        <div className="w-full h-full overflow-hidden rounded-[20px]">
+        <div
+          ref={containerRef}
+          className="w-full h-full overflow-hidden rounded-[20px] touch-pan-y"
+          onTouchStart={handleDragStart}
+          onTouchMove={handleDragMove}
+          onTouchEnd={handleDragEnd}
+          onMouseDown={handleDragStart}
+          onMouseMove={handleDragMove}
+          onMouseUp={handleDragEnd}
+          onMouseLeave={() => {
+            if (isDragging) handleDragEnd();
+          }}
+        >
           <div
-            className="flex h-full transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            className={`flex h-full ${isDragging ? "" : "transition-transform duration-300 ease-in-out"}`}
+            style={{ transform: `translateX(${translateX}px)` }}
           >
             {PLACEHOLDER_COLORS.map((color, i) => (
               <div
                 key={i}
-                className="w-full h-full flex-shrink-0 flex items-center justify-center text-white/40 text-sm"
+                className="w-full h-full flex-shrink-0 flex items-center justify-center text-white/40 text-sm select-none"
                 style={{ backgroundColor: color }}
               >
                 Bild {i + 1}
@@ -79,7 +127,7 @@ export default function ImageSlider() {
             onClick={() => setCurrent(i)}
             aria-label={`Bild ${i + 1}`}
             className={`h-[8px] w-[8px] rounded-full transition-colors ${
-              i === current ? "bg-white" : "bg-white/40"
+              i === current ? "bg-waw-green" : "bg-gray-300"
             }`}
           />
         ))}
