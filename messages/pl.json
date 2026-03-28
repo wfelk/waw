@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "description": "Samochody używane, powypadkowe, części samochodowe i serwis wymiany opon"
+  },
+  "sideMenu": {
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "start": "Start",
+    "aboutUs": "O nas",
+    "listings": "Ogłoszenia",
+    "contact": "Kontakt"
+  },
+  "sectionStart": {
+    "tagline1": "Samochody używane. Powypadkowe.",
+    "tagline2": "(Części samochodowe?). Wymiana opon.",
+    "viewListings": "Dostępne ogłoszenia",
+    "call": "Zadzwoń",
+    "sendEmail": "Wyślij e-mail",
+    "whatsApp": "WhatsApp",
+    "vehicleAlt": "Pojazd"
+  },
+  "sectionAboutUs": {
+    "title": "O nas",
+    "welcome": "Witamy w",
+    "companyName": "WAW Automobile",
+    "tagline": "– Wasz ekspert od mobilności drugiej szansy.",
+    "description": "To, co zaczęło się jako mała pasja do silników, z biegiem lat rozwinęło się w wszechstronne przedsiębiorstwo rodzinne. Wierzymy, że każdy pojazd ma swoją wartość – niezależnie od tego, czy błyszczy w salonie, czy potrzebuje drugiej szansy po wypadku."
+  },
+  "sectionOffers": {
+    "title": "Usługi",
+    "image": "Zdjęcie",
+    "usedCars": {
+      "title": "Samochody używane",
+      "description": "Nasz asortyment jest tak różnorodny jak nasi klienci. Szukasz oszczędnego auta miejskiego, niezawodnego kombi dla rodziny czy solidnego pojazdu do użytku komercyjnego? Dzięki ciągłemu skupowi – również pojazdów powypadkowych – często znajdujemy pojazdy specjalistyczne dla majsterkowiczów lub na eksport."
+    },
+    "accidentCars": {
+      "title": "Samochody powypadkowe",
+      "description": "Nasze pojazdy powypadkowe i uszkodzone stanowią doskonałą bazę do pozyskiwania części zamiennych. Niezależnie od tego, czy chodzi o nienaruszone elementy nadwozia, sterowniki czy komponenty mechaniczne – wybieramy pojazdy o wysokiej wartości resztkowej. Nie ukrywamy stanu pojazdów. Otrzymasz od nas uczciwą ocenę tego, które podzespoły jeszcze działają, a które części nadają się do rozbiórki."
+    },
+    "tireService": {
+      "title": "Serwis wymiany\nopon",
+      "description": "Nasze pojazdy powypadkowe i uszkodzone stanowią doskonałą bazę do pozyskiwania części zamiennych. Niezależnie od tego, czy chodzi o nienaruszone elementy nadwozia, sterowniki czy komponenty mechaniczne – wybieramy pojazdy o wysokiej wartości resztkowej. Nie ukrywamy stanu pojazdów. Otrzymasz od nas uczciwą ocenę tego, które podzespoły jeszcze działają, a które części nadają się do rozbiórki."
+    }
+  },
+  "sectionListings": {
+    "title": "Ogłoszenia",
+    "details": "Szczegóły",
+    "image": "Zdjęcie"
+  },
+  "imageSlider": {
+    "image": "Zdjęcie {number}",
+    "previousImage": "Poprzednie zdjęcie",
+    "nextImage": "Następne zdjęcie"
+  }
+}
