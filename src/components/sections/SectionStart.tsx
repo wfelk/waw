@@ -50,7 +50,7 @@ export const SectionStart = () => {
 
         <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8">
           <a
-            href="#inserate"
+            href="#listings"
             className="flex h-[79px] w-[338px] items-center justify-center rounded-[30px] bg-waw-green text-[20px] font-semibold text-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] transition-opacity hover:opacity-90"
           >
             Verfügbare Inserate

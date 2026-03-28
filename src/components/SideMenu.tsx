@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const menuItems = [
   { href: "#start", label: "Start" },
-  { href: "#ueber-uns", label: "Über Uns" },
-  { href: "#inserate", label: "Inserate" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "#about-us", label: "Über Uns" },
+  { href: "#listings", label: "Inserate" },
+  { href: "#contact", label: "Kontakt" },
 ];
 
 export const SideMenu = () => {

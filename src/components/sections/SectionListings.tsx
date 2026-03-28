@@ -54,7 +54,7 @@ const MOCK_LISTINGS = [
 export const SectionListings = () => {
   return (
     <section
-      id="inserate"
+      id="listings"
       className="flex flex-col items-center bg-white px-6 py-12"
     >
       {/* Badge */}

@@ -2,7 +2,7 @@ import { ImageSlider } from "@/components/ImageSlider";
 
 export const SectionAboutUs = () => {
   return (
-    <section id="ueber-uns" className="flex flex-col items-center bg-white px-6 py-12">
+    <section id="about-us" className="flex flex-col items-center bg-white px-6 py-12">
       {/* Badge */}
       <div className="mb-8 rounded-[20px] bg-waw-green px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
         <h2 className="text-[28px] font-bold uppercase tracking-wide text-white">
