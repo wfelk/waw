@@ -16,7 +16,7 @@ export const ServiceCard = ({ serviceKey, color }: Props) => {
         style={{ backgroundColor: color }}
       >
         {t("image")}
-        <h3 className="absolute bottom-3 left-4 font-secondary text-[28px] leading-tight text-white tablet:text-[32px]">
+        <h3 className="absolute bottom-3 left-4 right-4 hyphens-auto font-secondary text-[28px] leading-tight text-white tablet:text-[32px]">
           {t(`${serviceKey}.title`)}
         </h3>
       </div>
