@@ -1,15 +1,15 @@
-import Start from "@/components/Start";
-import AboutUs from "@/components/AboutUs";
-import Offers from "@/components/Offers";
-import Listings from "@/components/Listings";
+import SectionStart from "@/components/sections/SectionStart";
+import SectionAboutUs from "@/components/sections/SectionAboutUs";
+import SectionOffers from "@/components/sections/SectionOffers";
+import SectionListings from "@/components/sections/SectionListings";
 
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen max-w-[402px] flex-col font-sans">
-      <Start />
-      <AboutUs />
-      <Offers />
-      <Listings />
+      <SectionStart />
+      <SectionAboutUs />
+      <SectionOffers />
+      <SectionListings />
     </div>
   );
 }

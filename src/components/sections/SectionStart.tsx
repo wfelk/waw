@@ -7,7 +7,7 @@ const contactLinks = [
   { href: "https://wa.me/49XXXXXXXXX", label: "WhatsApp", icon: "/images/whatsapp-icon.svg", alt: "WhatsApp", size: 38, external: true },
 ];
 
-export default function Start() {
+export default function SectionStart() {
   return (
     <>
       <header className="relative z-10 flex h-[98px] items-center justify-between bg-white pr-4">

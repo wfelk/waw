@@ -19,7 +19,7 @@ const SERVICES = [
   },
 ];
 
-export default function Offers() {
+export default function SectionOffers() {
   return (
     <section
       id="angebote"
