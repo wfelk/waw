@@ -15,7 +15,7 @@ export const SectionServices = () => {
       className="flex flex-col items-center bg-[#565656] px-6 py-12"
     >
       {/* Badge */}
-      <div className="mb-10 rounded-[20px] bg-primary px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+      <div className="mb-10 rounded-component bg-primary px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
         <h2 className="text-[28px] font-bold uppercase tracking-wide text-white">
           {t("title")}
         </h2>
@@ -26,7 +26,7 @@ export const SectionServices = () => {
         {SERVICES.map((service) => (
           <div
             key={service.key}
-            className="overflow-hidden rounded-[20px] shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]"
+            className="overflow-hidden rounded-component shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]"
           >
             {/* Image with overlaid title */}
             <div

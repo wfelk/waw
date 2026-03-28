@@ -75,7 +75,7 @@ export const SectionStart = () => {
         </div>
       </section>
 
-      <div className="mx-auto h-[7px] w-full max-w-[416px] rounded-[20px] bg-black" />
+      <div className="mx-auto h-[7px] w-full max-w-[416px] rounded-component bg-black" />
     </>
   );
 }

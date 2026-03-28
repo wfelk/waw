@@ -4,12 +4,14 @@
   --background: #565656;
   --foreground: #ffffff;
   --primary: #47af63;
+  --border-radius: 20px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --radius-component: var(--border-radius);
   --font-sans: var(--font-anuphan);
   --font-secondary: var(--font-alumni);
 }

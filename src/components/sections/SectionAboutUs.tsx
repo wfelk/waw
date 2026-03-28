@@ -7,7 +7,7 @@ export const SectionAboutUs = () => {
   return (
     <section id="about-us" className="flex flex-col items-center bg-white px-6 py-12">
       {/* Badge */}
-      <div className="mb-8 rounded-[20px] bg-primary px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+      <div className="mb-8 rounded-component bg-primary px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
         <h2 className="text-[28px] font-bold uppercase tracking-wide text-white">
           {t("title")}
         </h2>

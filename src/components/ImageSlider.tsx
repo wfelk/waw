@@ -82,7 +82,7 @@ export const ImageSlider = () => {
         {/* Slides */}
         <div
           ref={containerRef}
-          className="w-full h-full overflow-hidden rounded-[20px] touch-pan-y"
+          className="w-full h-full overflow-hidden rounded-component touch-pan-y"
           onTouchStart={handleDragStart}
           onTouchMove={handleDragMove}
           onTouchEnd={handleDragEnd}
