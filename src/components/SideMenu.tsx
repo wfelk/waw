@@ -61,7 +61,7 @@ export const SideMenu = () => {
               <a
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className="block rounded-lg px-4 py-3 text-[18px] font-semibold text-gray-800 transition-colors hover:bg-waw-green/10 hover:text-waw-green"
+                className="block rounded-lg px-4 py-3 text-[18px] font-semibold text-gray-800 transition-colors hover:bg-primary/10 hover:text-primary"
               >
                 {label}
               </a>

@@ -140,7 +140,7 @@ export const ImageSlider = () => {
             onClick={() => setCurrent(i)}
             aria-label={t("image", { number: i + 1 })}
             className={`h-[8px] w-[8px] rounded-full transition-colors ${
-              i === current ? "bg-waw-green" : "bg-gray-300"
+              i === current ? "bg-primary" : "bg-gray-300"
             }`}
           />
         ))}

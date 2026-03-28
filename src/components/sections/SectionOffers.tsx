@@ -15,7 +15,7 @@ export const SectionOffers = () => {
       className="flex flex-col items-center bg-[#565656] px-6 py-12"
     >
       {/* Badge */}
-      <div className="mb-10 rounded-[20px] bg-waw-green px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+      <div className="mb-10 rounded-[20px] bg-primary px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
         <h2 className="text-[28px] font-bold uppercase tracking-wide text-white">
           {t("title")}
         </h2>
@@ -34,7 +34,7 @@ export const SectionOffers = () => {
             </div>
 
             {/* Title with green underline */}
-            <h3 className="mt-5 whitespace-pre-line text-center text-[20px] font-semibold leading-tight text-white underline decoration-waw-green decoration-3 underline-offset-4">
+            <h3 className="mt-5 whitespace-pre-line text-center text-[20px] font-semibold leading-tight text-white underline decoration-primary decoration-3 underline-offset-4">
               {t(`${service.key}.title`)}
             </h3>
 

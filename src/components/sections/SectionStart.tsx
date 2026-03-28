@@ -41,7 +41,7 @@ export const SectionStart = () => {
           <div className="relative h-[287px] w-[287px]">
             <Image src="/images/waw-logo.png" alt="WAW" fill className="object-contain" />
           </div>
-          <p className="font-(family-name:--font-alumni) -mt-28 text-[29.6px] font-semibold uppercase tracking-[17.75px] text-waw-green">
+          <p className="font-(family-name:--font-alumni) -mt-28 text-[29.6px] font-semibold uppercase tracking-[17.75px] text-primary">
             Automobile
           </p>
         </div>
@@ -54,12 +54,12 @@ export const SectionStart = () => {
         <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8">
           <a
             href="#listings"
-            className="flex h-[79px] w-[338px] items-center justify-center rounded-[30px] bg-waw-green text-[20px] font-semibold text-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] transition-opacity hover:opacity-90"
+            className="flex h-[79px] w-[338px] items-center justify-center rounded-[30px] bg-primary text-[20px] font-semibold text-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] transition-opacity hover:opacity-90"
           >
             {t("viewListings")}
           </a>
 
-          <nav className="flex h-[79px] w-[338px] items-center justify-evenly rounded-[30px] bg-waw-green shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+          <nav className="flex h-[79px] w-[338px] items-center justify-evenly rounded-[30px] bg-primary shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
             {contactLinks.map(({ key, href, icon, alt, size, external }) => (
               <a
                 key={key}

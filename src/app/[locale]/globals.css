@@ -3,13 +3,13 @@
 :root {
   --background: #565656;
   --foreground: #ffffff;
-  --waw-green: #47af63;
+  --primary: #47af63;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-waw-green: var(--waw-green);
+  --color-primary: var(--primary);
   --font-sans: var(--font-anuphan);
 }
 

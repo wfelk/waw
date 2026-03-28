@@ -29,7 +29,7 @@ WAW Automobile — a Next.js mobile-first website for a German used car dealersh
 - All components are functional with hooks, TypeScript-typed props
 - Client components use `"use client"` directive
 - Tailwind utility classes inline (no CSS modules)
-- Brand color: `--waw-green: #47af63`
+- Brand color: `--primary: #47af63`
 - Mobile-first layout constrained to `max-w-[402px]`
 - German language content (lang="de")
 - Path alias: `@/*` → `./src/*`
