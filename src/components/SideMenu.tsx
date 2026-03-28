@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -8,7 +8,7 @@ import Image from "next/image";
 export const SideMenu = () => {
   const t = useTranslations("sideMenu");
   const [isOpen, setIsOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const isMounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   const menuItems = [
     { href: "#start", label: t("start") },
@@ -18,17 +18,19 @@ export const SideMenu = () => {
   ];
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "scroll";
+      document.body.style.position = "fixed";
+      document.body.style.inset = "0";
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflowY = "";
+      document.body.style.position = "";
+      document.body.style.inset = "";
     }
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflowY = "";
+      document.body.style.position = "";
+      document.body.style.inset = "";
     };
   }, [isOpen]);
 
