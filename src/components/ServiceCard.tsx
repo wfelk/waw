@@ -9,7 +9,7 @@ export const ServiceCard = ({ serviceKey, color }: Props) => {
   const t = useTranslations("sectionServices")
 
   return (
-    <div className="overflow-hidden rounded-component shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+    <div className="flex flex-col overflow-hidden rounded-component shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
       {/* Image with overlaid title */}
       <div
         className="relative flex h-[180px] items-center justify-center text-[14px] text-white/40 select-none tablet:h-[200px] desktop:h-[220px]"
@@ -22,7 +22,7 @@ export const ServiceCard = ({ serviceKey, color }: Props) => {
       </div>
 
       {/* Description */}
-      <div className="bg-white px-5 py-5">
+      <div className="flex-1 bg-white px-5 py-5">
         <p className="text-[11px] font-light leading-relaxed text-black tablet:text-[13px] desktop:text-[14px]">
           {t(`${serviceKey}.description`)}
         </p>
