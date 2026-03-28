@@ -1,13 +1,16 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { SideMenu } from "@/components/SideMenu";
 
 const contactLinks = [
-  { href: "tel:+49XXXXXXXXX", label: "Anrufen", icon: "/images/phone-icon.svg", alt: "Telefon", size: 42 },
-  { href: "mailto:info@waw-automobile.de", label: "E-Mail senden", icon: "/images/mail-icon.svg", alt: "E-Mail", size: 30 },
-  { href: "https://wa.me/49XXXXXXXXX", label: "WhatsApp", icon: "/images/whatsapp-icon.svg", alt: "WhatsApp", size: 38, external: true },
-];
+  { key: "call", href: "tel:+49XXXXXXXXX", icon: "/images/phone-icon.svg", alt: "Telefon", size: 42, external: false },
+  { key: "sendEmail", href: "mailto:info@waw-automobile.de", icon: "/images/mail-icon.svg", alt: "E-Mail", size: 30, external: false },
+  { key: "whatsApp", href: "https://wa.me/49XXXXXXXXX", icon: "/images/whatsapp-icon.svg", alt: "WhatsApp", size: 38, external: true },
+] as const;
 
 export const SectionStart = () => {
+  const t = useTranslations("sectionStart");
+
   return (
     <>
       <header className="relative z-10 flex h-[98px] items-center justify-between bg-white pr-4">
@@ -27,7 +30,7 @@ export const SectionStart = () => {
         <div className="pointer-events-none absolute -left-[242px] top-0 h-[693px] w-[693px]">
           <Image
             src="/images/gradient-car.png"
-            alt="Fahrzeug"
+            alt={t("vehicleAlt")}
             fill
             className="-scale-x-100 object-cover"
             priority
@@ -44,8 +47,8 @@ export const SectionStart = () => {
         </div>
 
         <div className="relative z-10 mt-4 text-center text-[15px] font-light text-white">
-          <p>Gebrauchtwagen. Unfallwagen.</p>
-          <p>(Fahrzeugteile?). Reifen-Umziehservice.</p>
+          <p>{t("tagline1")}</p>
+          <p>{t("tagline2")}</p>
         </div>
 
         <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8">
@@ -53,15 +56,15 @@ export const SectionStart = () => {
             href="#listings"
             className="flex h-[79px] w-[338px] items-center justify-center rounded-[30px] bg-waw-green text-[20px] font-semibold text-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] transition-opacity hover:opacity-90"
           >
-            Verfügbare Inserate
+            {t("viewListings")}
           </a>
 
           <nav className="flex h-[79px] w-[338px] items-center justify-evenly rounded-[30px] bg-waw-green shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
-            {contactLinks.map(({ href, label, icon, alt, size, external }) => (
+            {contactLinks.map(({ key, href, icon, alt, size, external }) => (
               <a
-                key={label}
+                key={key}
                 href={href}
-                aria-label={label}
+                aria-label={t(key)}
                 className="transition-opacity hover:opacity-80"
                 {...(external && { target: "_blank", rel: "noopener noreferrer" })}
               >

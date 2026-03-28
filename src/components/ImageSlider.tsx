@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const SLIDE_COUNT = 8;
 
@@ -16,6 +17,7 @@ const PLACEHOLDER_COLORS = [
 ];
 
 export const ImageSlider = () => {
+  const t = useTranslations("imageSlider");
   const [current, setCurrent] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -101,7 +103,7 @@ export const ImageSlider = () => {
                 className="w-full h-full flex-shrink-0 flex items-center justify-center text-white/40 text-sm select-none"
                 style={{ backgroundColor: color }}
               >
-                Bild {i + 1}
+                {t("image", { number: i + 1 })}
               </div>
             ))}
           </div>
@@ -110,7 +112,7 @@ export const ImageSlider = () => {
         {/* Prev arrow */}
         <button
           onClick={prev}
-          aria-label="Vorheriges Bild"
+          aria-label={t("previousImage")}
           className="absolute left-[-16px] top-1/2 -translate-y-1/2 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-white/80 text-gray-700 shadow transition-colors hover:bg-white"
         >
           <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
@@ -121,7 +123,7 @@ export const ImageSlider = () => {
         {/* Next arrow */}
         <button
           onClick={next}
-          aria-label="Nächstes Bild"
+          aria-label={t("nextImage")}
           className="absolute right-[-16px] top-1/2 -translate-y-1/2 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-white/80 text-gray-700 shadow transition-colors hover:bg-white"
         >
           <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
@@ -136,7 +138,7 @@ export const ImageSlider = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            aria-label={`Bild ${i + 1}`}
+            aria-label={t("image", { number: i + 1 })}
             className={`h-[8px] w-[8px] rounded-full transition-colors ${
               i === current ? "bg-waw-green" : "bg-gray-300"
             }`}

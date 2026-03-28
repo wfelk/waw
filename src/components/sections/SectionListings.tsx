@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 const MOCK_LISTINGS = [
   {
     id: 1,
@@ -52,6 +54,8 @@ const MOCK_LISTINGS = [
 ];
 
 export const SectionListings = () => {
+  const t = useTranslations("sectionListings");
+
   return (
     <section
       id="listings"
@@ -60,7 +64,7 @@ export const SectionListings = () => {
       {/* Badge */}
       <div className="mb-8 rounded-[20px] bg-waw-green px-10 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
         <h2 className="text-[28px] font-bold uppercase tracking-wide text-white">
-          Inserate
+          {t("title")}
         </h2>
       </div>
 
@@ -76,7 +80,7 @@ export const SectionListings = () => {
               className="flex h-[180px] w-full items-center justify-center text-[14px] text-white/40 select-none"
               style={{ backgroundColor: car.color }}
             >
-              Bild
+              {t("image")}
             </div>
 
             {/* Card info */}
@@ -94,7 +98,7 @@ export const SectionListings = () => {
                   {car.price} &euro;
                 </span>
                 <button className="rounded-[12px] bg-waw-green px-5 py-2 text-[13px] font-semibold text-white shadow transition-opacity hover:opacity-80">
-                  Details
+                  {t("details")}
                 </button>
               </div>
             </div>

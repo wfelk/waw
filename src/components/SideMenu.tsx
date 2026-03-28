@@ -1,17 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const menuItems = [
-  { href: "#start", label: "Start" },
-  { href: "#about-us", label: "Über Uns" },
-  { href: "#listings", label: "Inserate" },
-  { href: "#contact", label: "Kontakt" },
-];
-
 export const SideMenu = () => {
+  const t = useTranslations("sideMenu");
   const [isOpen, setIsOpen] = useState(false);
+
+  const menuItems = [
+    { href: "#start", label: t("start") },
+    { href: "#about-us", label: t("aboutUs") },
+    { href: "#listings", label: t("listings") },
+    { href: "#contact", label: t("contact") },
+  ];
 
   useEffect(() => {
     if (isOpen) {
@@ -26,7 +28,7 @@ export const SideMenu = () => {
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)} aria-label="Menü öffnen" className="p-2">
+      <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2">
         <Image src="/images/menu-icon.svg" alt="" width={33} height={22} />
       </button>
 
@@ -45,7 +47,7 @@ export const SideMenu = () => {
         }`}
       >
         <div className="flex items-center justify-end p-4">
-          <button onClick={() => setIsOpen(false)} aria-label="Menü schließen" className="p-2">
+          <button onClick={() => setIsOpen(false)} aria-label={t("closeMenu")} className="p-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2" strokeLinecap="round">
               <line x1="6" y1="6" x2="18" y2="18" />
               <line x1="18" y1="6" x2="6" y2="18" />

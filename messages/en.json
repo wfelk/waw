@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "description": "Used cars, accident vehicles, vehicle parts & tire change service"
+  },
+  "sideMenu": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "start": "Home",
+    "aboutUs": "About Us",
+    "listings": "Listings",
+    "contact": "Contact"
+  },
+  "sectionStart": {
+    "tagline1": "Used Cars. Accident Vehicles.",
+    "tagline2": "(Vehicle Parts?). Tire Change Service.",
+    "viewListings": "Available Listings",
+    "call": "Call",
+    "sendEmail": "Send Email",
+    "whatsApp": "WhatsApp",
+    "vehicleAlt": "Vehicle"
+  },
+  "sectionAboutUs": {
+    "title": "About Us",
+    "welcome": "Welcome to",
+    "companyName": "WAW Automobile",
+    "tagline": "– your expert for second-chance mobility.",
+    "description": "What started as a small passion for engines has grown over the years into a versatile family business. We believe that every vehicle has value – whether it shines in the showroom or needs a second chance after an accident."
+  },
+  "sectionOffers": {
+    "title": "Services",
+    "image": "Image",
+    "usedCars": {
+      "title": "Used Cars",
+      "description": "Our range is as diverse as our customers. Looking for an economical city car, a reliable estate for the family, or a robust vehicle for commercial use? Through our constant purchasing – including accident vehicles – we often find specialty vehicles for hobbyists or export."
+    },
+    "accidentCars": {
+      "title": "Accident Vehicles",
+      "description": "Our accident and defect vehicles provide an excellent basis for spare parts recovery. Whether intact body parts, control units, or mechanical components – we select vehicles with high residual substance. We make no secret of their condition. You'll receive an honest assessment from us of which assemblies still run and which parts are destined for salvage."
+    },
+    "tireService": {
+      "title": "Tire Change\nService",
+      "description": "Our accident and defect vehicles provide an excellent basis for spare parts recovery. Whether intact body parts, control units, or mechanical components – we select vehicles with high residual substance. We make no secret of their condition. You'll receive an honest assessment from us of which assemblies still run and which parts are destined for salvage."
+    }
+  },
+  "sectionListings": {
+    "title": "Listings",
+    "details": "Details",
+    "image": "Image"
+  },
+  "imageSlider": {
+    "image": "Image {number}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image"
+  }
+}
