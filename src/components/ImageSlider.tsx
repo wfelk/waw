@@ -78,7 +78,7 @@ export const ImageSlider = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       {/* Slider */}
-      <div className="relative w-[300px] h-[220px]">
+      <div className="relative w-[300px] h-[220px] tablet:w-[500px] tablet:h-[340px] desktop:w-[600px] desktop:h-[400px]">
         {/* Slides */}
         <div
           ref={containerRef}

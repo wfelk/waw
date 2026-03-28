@@ -19,11 +19,11 @@ export const SectionListings = () => {
   return (
     <section
       id="listings"
-      className="flex flex-col items-center bg-white px-6 py-12"
+      className="flex flex-col items-center bg-white px-6 py-12 tablet:px-12 tablet:py-16 desktop:px-20 desktop:py-20"
     >
       <SectionBadge title={t("title")} />
 
-      <div className="flex w-full max-w-[340px] flex-col gap-5">
+      <div className="grid w-full max-w-[340px] grid-cols-1 gap-5 tablet:max-w-[700px] tablet:grid-cols-2 tablet:gap-6 desktop:max-w-[1100px] desktop:grid-cols-3 desktop:gap-8">
         {MOCK_LISTINGS.map((car) => (
           <ListingCard
             key={car.id}

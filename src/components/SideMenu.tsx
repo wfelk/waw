@@ -36,7 +36,21 @@ export const SideMenu = () => {
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2">
+      {/* Desktop inline navigation */}
+      <nav className="hidden desktop:flex desktop:items-center desktop:gap-8">
+        {menuItems.map(({ href, label }) => (
+          <a
+            key={href}
+            href={href}
+            className="text-[16px] font-semibold text-gray-800 transition-colors hover:text-primary"
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+
+      {/* Mobile/Tablet hamburger button */}
+      <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 desktop:hidden">
         <Image src="/images/menu-icon.svg" alt="" width={33} height={22} />
       </button>
 
@@ -45,7 +59,7 @@ export const SideMenu = () => {
           <>
             {/* Backdrop */}
             <div
-              className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+              className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 desktop:hidden ${
                 isOpen ? "opacity-100" : "pointer-events-none opacity-0"
               }`}
               onClick={() => setIsOpen(false)}
@@ -53,7 +67,7 @@ export const SideMenu = () => {
 
             {/* Drawer */}
             <nav
-              className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-white shadow-xl transition-transform duration-300 ${
+              className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-white shadow-xl transition-transform duration-300 desktop:hidden ${
                 isOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >

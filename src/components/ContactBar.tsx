@@ -11,7 +11,7 @@ export const ContactBar = () => {
   const t = useTranslations("sectionStart")
 
   return (
-    <nav className="flex h-[79px] w-[338px] items-center justify-evenly rounded-[30px] bg-primary shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]">
+    <nav className="flex h-[79px] w-[338px] items-center justify-evenly rounded-[30px] bg-primary shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] tablet:w-[300px]">
       {contactLinks.map(({ key, href, icon, alt, size, external }) => (
         <a
           key={key}
