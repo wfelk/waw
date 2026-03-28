@@ -10,7 +10,7 @@ const menuItems = [
   { href: "#kontakt", label: "Kontakt" },
 ];
 
-export default function SideMenu() {
+export const SideMenu = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {

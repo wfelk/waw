@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SideMenu from "@/components/SideMenu";
+import { SideMenu } from "@/components/SideMenu";
 
 const contactLinks = [
   { href: "tel:+49XXXXXXXXX", label: "Anrufen", icon: "/images/phone-icon.svg", alt: "Telefon", size: 42 },
@@ -7,7 +7,7 @@ const contactLinks = [
   { href: "https://wa.me/49XXXXXXXXX", label: "WhatsApp", icon: "/images/whatsapp-icon.svg", alt: "WhatsApp", size: 38, external: true },
 ];
 
-export default function SectionStart() {
+export const SectionStart = () => {
   return (
     <>
       <header className="relative z-10 flex h-[98px] items-center justify-between bg-white pr-4">

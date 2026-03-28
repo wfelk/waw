@@ -1,6 +1,6 @@
-import ImageSlider from "@/components/ImageSlider";
+import { ImageSlider } from "@/components/ImageSlider";
 
-export default function SectionAboutUs() {
+export const SectionAboutUs = () => {
   return (
     <section id="ueber-uns" className="flex flex-col items-center bg-white px-6 py-12">
       {/* Badge */}

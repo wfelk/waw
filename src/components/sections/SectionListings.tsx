@@ -51,7 +51,7 @@ const MOCK_LISTINGS = [
   },
 ];
 
-export default function SectionListings() {
+export const SectionListings = () => {
   return (
     <section
       id="inserate"

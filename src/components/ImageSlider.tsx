@@ -15,7 +15,7 @@ const PLACEHOLDER_COLORS = [
   "#2d3748",
 ];
 
-export default function ImageSlider() {
+export const ImageSlider = () => {
   const [current, setCurrent] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
   const [isDragging, setIsDragging] = useState(false);

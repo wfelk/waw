@@ -1,7 +1,7 @@
-import SectionStart from "@/components/sections/SectionStart";
-import SectionAboutUs from "@/components/sections/SectionAboutUs";
-import SectionOffers from "@/components/sections/SectionOffers";
-import SectionListings from "@/components/sections/SectionListings";
+import { SectionStart } from "@/components/sections/SectionStart";
+import { SectionAboutUs } from "@/components/sections/SectionAboutUs";
+import { SectionOffers } from "@/components/sections/SectionOffers";
+import { SectionListings } from "@/components/sections/SectionListings";
 
 export default function Home() {
   return (
