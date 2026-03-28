@@ -30,11 +30,11 @@
     "title": "Dienstleistungen",
     "image": "Bild",
     "usedCars": {
-      "title": "Gebrauchtwagen",
+      "title": "Gebrauchtwagenverkauf",
       "description": "Unser Sortiment ist so vielseitig wie unsere Kunden. Suchen Sie einen sparsamen Kleinwagen für die City, einen zuverlässigen Kombi für die Familie oder ein robustes Fahrzeug für den gewerblichen Einsatz? Durch unseren ständigen Ankauf – auch von Unfallfahrzeugen – finden wir oft auch Spezialfahrzeuge für Bastler oder den Export."
     },
     "accidentCars": {
-      "title": "Unfallwagen",
+      "title": "Unfallwagenverkauf",
       "description": "Unsere Unfall- und Defektfahrzeuge bieten eine hervorragende Basis für die Ersatzteilgewinnung. Ob intakte Karosserieteile, Steuergeräte oder mechanische Komponenten – wir selektieren Fahrzeuge mit hoher Restsubstanz. Wir machen kein Geheimnis aus dem Zustand. Sie erhalten von uns eine ehrliche Einschätzung, welche Aggregate noch laufen und welche Bauteile für den Ausschlachter prädestiniert sind."
     },
     "tireService": {
