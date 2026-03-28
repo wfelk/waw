@@ -34,14 +34,14 @@ export const SectionServices = () => {
               style={{ backgroundColor: service.color }}
             >
               {t("image")}
-              <h3 className="absolute bottom-3 left-4 font-secondary text-[22px] leading-tight text-white">
+              <h3 className="absolute bottom-3 left-4 font-secondary text-[28px] leading-tight text-white">
                 {t(`${service.key}.title`)}
               </h3>
             </div>
 
             {/* Description */}
-            <div className="bg-[#2a2a2a] px-5 py-5">
-              <p className="text-[11px] font-light leading-relaxed text-white/90">
+            <div className="bg-white px-5 py-5">
+              <p className="text-[11px] font-light leading-relaxed text-black">
                 {t(`${service.key}.description`)}
               </p>
             </div>
