@@ -1,6 +1,6 @@
 import { SectionStart } from "@/components/sections/SectionStart";
 import { SectionAboutUs } from "@/components/sections/SectionAboutUs";
-import { SectionOffers } from "@/components/sections/SectionOffers";
+import { SectionServices } from "@/components/sections/SectionServices";
 import { SectionListings } from "@/components/sections/SectionListings";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <div className="mx-auto flex min-h-screen max-w-[402px] flex-col font-sans">
       <SectionStart />
       <SectionAboutUs />
-      <SectionOffers />
+      <SectionServices />
       <SectionListings />
     </div>
   );

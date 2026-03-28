@@ -6,12 +6,12 @@ const SERVICES = [
   { key: "tireService", color: "#1f2937" },
 ] as const;
 
-export const SectionOffers = () => {
-  const t = useTranslations("sectionOffers");
+export const SectionServices = () => {
+  const t = useTranslations("sectionServices");
 
   return (
     <section
-      id="angebote"
+      id="service"
       className="flex flex-col items-center bg-[#565656] px-6 py-12"
     >
       {/* Badge */}

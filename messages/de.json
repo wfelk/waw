@@ -26,8 +26,8 @@
     "tagline": "– Ihrem Experten für Mobilität in zweiter Instanz.",
     "description": "Was als kleine Leidenschaft für Motoren begann, hat sich über die Jahre zu einem vielseitigen Familienbetrieb entwickelt. Wir glauben daran, dass jedes Fahrzeug einen Wert hat – egal, ob es glänzend im Verkaufsraum steht oder nach einem Unfall eine zweite Chance braucht."
   },
-  "sectionOffers": {
-    "title": "Angebote",
+  "sectionServices": {
+    "title": "Dienstleistungen",
     "image": "Bild",
     "usedCars": {
       "title": "Gebrauchtwagen",
