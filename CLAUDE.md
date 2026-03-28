@@ -35,3 +35,4 @@ WAW Automobile — a Next.js mobile-first website for a German used car dealersh
 - Path alias: `@/*` → `./src/*`
 - Always use named exports with `const` for components (e.g., `export const MyComponent = () => { ... }`), never default exports
 - Component and file names should always be in English
+- Boolean variable names should start with `is`, `has`, `should`, `can`, or similar prefixes (e.g., `isOpen`, `hasError`, `shouldRender`)

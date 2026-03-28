@@ -11,10 +11,10 @@ const menuItems = [
 ];
 
 export const SideMenu = () => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (open) {
+    if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -22,30 +22,30 @@ export const SideMenu = () => {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [isOpen]);
 
   return (
     <>
-      <button onClick={() => setOpen(true)} aria-label="Menü öffnen" className="p-2">
+      <button onClick={() => setIsOpen(true)} aria-label="Menü öffnen" className="p-2">
         <Image src="/images/menu-icon.svg" alt="" width={33} height={22} />
       </button>
 
       {/* Backdrop */}
       <div
         className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
-          open ? "opacity-100" : "pointer-events-none opacity-0"
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
-        onClick={() => setOpen(false)}
+        onClick={() => setIsOpen(false)}
       />
 
       {/* Drawer */}
       <nav
         className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-white shadow-xl transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex items-center justify-end p-4">
-          <button onClick={() => setOpen(false)} aria-label="Menü schließen" className="p-2">
+          <button onClick={() => setIsOpen(false)} aria-label="Menü schließen" className="p-2">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2" strokeLinecap="round">
               <line x1="6" y1="6" x2="18" y2="18" />
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -58,7 +58,7 @@ export const SideMenu = () => {
             <li key={href}>
               <a
                 href={href}
-                onClick={() => setOpen(false)}
+                onClick={() => setIsOpen(false)}
                 className="block rounded-lg px-4 py-3 text-[18px] font-semibold text-gray-800 transition-colors hover:bg-waw-green/10 hover:text-waw-green"
               >
                 {label}
