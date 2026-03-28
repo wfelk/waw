@@ -11,6 +11,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --font-sans: var(--font-anuphan);
+  --font-secondary: var(--font-alumni);
 }
 
 body {

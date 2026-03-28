@@ -24,24 +24,27 @@ export const SectionServices = () => {
       {/* Service cards */}
       <div className="flex w-full max-w-[340px] flex-col gap-10">
         {SERVICES.map((service) => (
-          <div key={service.key} className="flex flex-col items-center">
-            {/* Rounded image placeholder */}
+          <div
+            key={service.key}
+            className="overflow-hidden rounded-[20px] shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)]"
+          >
+            {/* Image with overlaid title */}
             <div
-              className="flex h-[180px] w-[260px] items-center justify-center rounded-[20px] text-[14px] text-white/40 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] select-none"
+              className="relative flex h-[180px] items-center justify-center text-[14px] text-white/40 select-none"
               style={{ backgroundColor: service.color }}
             >
               {t("image")}
+              <h3 className="absolute bottom-3 left-4 font-secondary text-[22px] leading-tight text-white">
+                {t(`${service.key}.title`)}
+              </h3>
             </div>
 
-            {/* Title with green underline */}
-            <h3 className="mt-5 whitespace-pre-line text-center text-[20px] font-semibold leading-tight text-white underline decoration-primary decoration-3 underline-offset-4">
-              {t(`${service.key}.title`)}
-            </h3>
-
             {/* Description */}
-            <p className="mt-4 max-w-[300px] text-center text-[12px] font-light leading-relaxed text-white/90">
-              {t(`${service.key}.description`)}
-            </p>
+            <div className="bg-[#2a2a2a] px-5 py-5">
+              <p className="text-[11px] font-light leading-relaxed text-white/90">
+                {t(`${service.key}.description`)}
+              </p>
+            </div>
           </div>
         ))}
       </div>
