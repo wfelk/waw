@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 
 const SLIDE_COUNT = 8;
 
@@ -21,6 +21,18 @@ export const ImageSlider = () => {
   const [isDragging, setIsDragging] = useState(false);
   const startX = useRef(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [slideWidth, setSlideWidth] = useState(300);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setSlideWidth(containerRef.current.offsetWidth);
+      }
+    };
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   const prev = useCallback(() => {
     setCurrent((c) => (c > 0 ? c - 1 : c));
@@ -59,7 +71,6 @@ export const ImageSlider = () => {
     setDragOffset(0);
   };
 
-  const slideWidth = containerRef.current?.offsetWidth ?? 300;
   const translateX = -(current * slideWidth) + dragOffset;
 
   return (
