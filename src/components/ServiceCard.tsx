@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl"
 
-type ServiceCardProps = {
+interface Props {
   serviceKey: string
   color: string
 }
 
-export const ServiceCard = ({ serviceKey, color }: ServiceCardProps) => {
+export const ServiceCard = ({ serviceKey, color }: Props) => {
   const t = useTranslations("sectionServices")
 
   return (

@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl"
 
-type ListingCardProps = {
+interface Props {
   title: string
   year: number
   km: string
@@ -8,7 +8,7 @@ type ListingCardProps = {
   color: string
 }
 
-export const ListingCard = ({ title, year, km, price, color }: ListingCardProps) => {
+export const ListingCard = ({ title, year, km, price, color }: Props) => {
   const t = useTranslations("sectionListings")
 
   return (
