@@ -12,11 +12,11 @@
   },
   "sectionStart": {
     "tagline1": "Gebrauchtwagen. Unfallwagen.",
-    "tagline2": "(Fahrzeugteile?). Reifen-Umziehservice.",
+    "tagline2": "Fahrzeugteile. Reifen-Umziehservice.",
     "viewListings": "Verfügbare Inserate",
     "call": "Anrufen",
     "sendEmail": "E-Mail senden",
-    "whatsApp": "WhatsApp",
+    "sendMessage": "Nachricht senden",
     "vehicleAlt": "Fahrzeug"
   },
   "sectionAboutUs": {
@@ -38,7 +38,7 @@
       "description": "Unsere Unfall- und Defektfahrzeuge bieten eine hervorragende Basis für die Ersatzteilgewinnung. Ob intakte Karosserieteile, Steuergeräte oder mechanische Komponenten – wir selektieren Fahrzeuge mit hoher Restsubstanz. Wir machen kein Geheimnis aus dem Zustand. Sie erhalten von uns eine ehrliche Einschätzung, welche Aggregate noch laufen und welche Bauteile für den Ausschlachter prädestiniert sind."
     },
     "tireService": {
-      "title": "Reifen-Umzieh-\nService",
+      "title": "Reifen-Umzieh-Service",
       "description": "Unsere Unfall- und Defektfahrzeuge bieten eine hervorragende Basis für die Ersatzteilgewinnung. Ob intakte Karosserieteile, Steuergeräte oder mechanische Komponenten – wir selektieren Fahrzeuge mit hoher Restsubstanz. Wir machen kein Geheimnis aus dem Zustand. Sie erhalten von uns eine ehrliche Einschätzung, welche Aggregate noch laufen und welche Bauteile für den Ausschlachter prädestiniert sind."
     }
   },

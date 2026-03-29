@@ -12,11 +12,11 @@
   },
   "sectionStart": {
     "tagline1": "Подержанные авто. Аварийные авто.",
-    "tagline2": "(Автозапчасти?). Шиномонтаж.",
+    "tagline2": "Автозапчасти. Шиномонтаж.",
     "viewListings": "Доступные объявления",
     "call": "Позвонить",
     "sendEmail": "Написать e-mail",
-    "whatsApp": "WhatsApp",
+    "sendMessage": "Отправить сообщение",
     "vehicleAlt": "Автомобиль"
   },
   "sectionAboutUs": {

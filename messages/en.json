@@ -12,11 +12,11 @@
   },
   "sectionStart": {
     "tagline1": "Used Cars. Accident Vehicles.",
-    "tagline2": "(Vehicle Parts?). Tire Change Service.",
+    "tagline2": "Vehicle Parts. Tire Change Service.",
     "viewListings": "Available Listings",
     "call": "Call",
     "sendEmail": "Send Email",
-    "whatsApp": "WhatsApp",
+    "sendMessage": "Send Message",
     "vehicleAlt": "Vehicle"
   },
   "sectionAboutUs": {
