@@ -115,7 +115,7 @@ export const ImageSlider = () => {
           onClick={prev}
           disabled={current === 0}
           aria-label={t("previousImage")}
-          className="absolute left-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:left-[-16px] tablet:h-[42px] tablet:w-[42px]"
+          className="absolute left-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-all hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:left-[-16px] tablet:h-[42px] tablet:w-[42px]"
         >
           <ChevronLeft size={16} strokeWidth={3} className="tablet:size-[22px]" />
         </button>
