@@ -22,7 +22,9 @@ export const ImageSlider = () => {
   const [current, setCurrent] = useState(0)
   const [dragOffset, setDragOffset] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
+  const [hoverSide, setHoverSide] = useState<"left" | "right" | null>(null)
   const startX = useRef(0)
+  const hasDragged = useRef(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const [slideWidth, setSlideWidth] = useState(300)
 
@@ -52,6 +54,7 @@ export const ImageSlider = () => {
 
   const handleDragStart = (e: React.TouchEvent | React.MouseEvent) => {
     setIsDragging(true)
+    hasDragged.current = false
     startX.current = getClientX(e)
     setDragOffset(0)
   }
@@ -59,7 +62,9 @@ export const ImageSlider = () => {
   const handleDragMove = (e: React.TouchEvent | React.MouseEvent) => {
     if (!isDragging) return
     const currentX = "touches" in e ? e.touches[0].clientX : e.clientX
-    setDragOffset(currentX - startX.current)
+    const offset = currentX - startX.current
+    if (Math.abs(offset) > 5) hasDragged.current = true
+    setDragOffset(offset)
   }
 
   const handleDragEnd = () => {
@@ -74,16 +79,39 @@ export const ImageSlider = () => {
     setDragOffset(0)
   }
 
+  const handleClick = (e: React.MouseEvent) => {
+    if (hasDragged.current) return
+    const rect = containerRef.current?.getBoundingClientRect()
+    if (!rect) return
+    const clickX = e.clientX - rect.left
+    if (clickX < rect.width / 2) {
+      prev()
+    } else {
+      next()
+    }
+  }
+
   const translateX = -(current * slideWidth) + dragOffset
 
+  const hasPrev = current > 0
+  const hasNext = current < SLIDE_COUNT - 1
+
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex w-full flex-col items-center gap-4 desktop:max-w-[900px]">
       {/* Slider */}
-      <div className="relative w-full aspect-[340/250] tablet:w-[700px] tablet:aspect-[700/476] desktop:w-[900px] desktop:aspect-[900/600]">
+      <div
+        className="relative w-full aspect-[340/250] tablet:w-[700px] tablet:aspect-[700/476] desktop:w-[900px] desktop:aspect-[900/600]"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect()
+          const x = e.clientX - rect.left
+          setHoverSide(x < rect.width / 2 ? "left" : "right")
+        }}
+        onMouseLeave={() => setHoverSide(null)}
+      >
         {/* Slides */}
         <div
           ref={containerRef}
-          className="w-full h-full overflow-hidden rounded-component touch-pan-y"
+          className="w-full h-full overflow-hidden rounded-component touch-pan-y cursor-pointer"
           onTouchStart={handleDragStart}
           onTouchMove={handleDragMove}
           onTouchEnd={handleDragEnd}
@@ -93,6 +121,7 @@ export const ImageSlider = () => {
           onMouseLeave={() => {
             if (isDragging) handleDragEnd()
           }}
+          onClick={handleClick}
         >
           <div
             className={`flex h-full ${isDragging ? "" : "transition-transform duration-300 ease-in-out"}`}
@@ -110,33 +139,33 @@ export const ImageSlider = () => {
           </div>
         </div>
 
-        {/* Prev arrow */}
-        <button
-          onClick={prev}
-          disabled={current === 0}
-          aria-label={t("previousImage")}
-          className="absolute left-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-all hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:left-[-16px] tablet:h-[42px] tablet:w-[42px]"
+        {/* Prev chevron — desktop only */}
+        <div
+          className="pointer-events-none absolute left-0 top-0 flex h-full items-center pl-4 transition-all duration-300"
+          style={{
+            opacity: !hoverSide || !hasPrev ? 0 : hoverSide === "left" ? 1 : 0.3,
+          }}
         >
           <ChevronLeft
-            size={16}
-            strokeWidth={3}
-            className="tablet:size-[22px]"
+            size={64}
+            strokeWidth={1.5}
+            className={`drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] transition-colors duration-300 ${hoverSide === "left" ? "text-primary" : "text-white"}`}
           />
-        </button>
+        </div>
 
-        {/* Next arrow */}
-        <button
-          onClick={next}
-          disabled={current === SLIDE_COUNT - 1}
-          aria-label={t("nextImage")}
-          className="absolute right-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:right-[-16px] tablet:h-[42px] tablet:w-[42px]"
+        {/* Next chevron — desktop only */}
+        <div
+          className="pointer-events-none absolute right-0 top-0 flex h-full items-center pr-4 transition-all duration-300"
+          style={{
+            opacity: !hoverSide || !hasNext ? 0 : hoverSide === "right" ? 1 : 0.3,
+          }}
         >
           <ChevronRight
-            size={16}
-            strokeWidth={3}
-            className="tablet:size-[22px]"
+            size={64}
+            strokeWidth={1.5}
+            className={`drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] transition-colors duration-300 ${hoverSide === "right" ? "text-primary" : "text-white"}`}
           />
-        </button>
+        </div>
       </div>
 
       {/* Dots */}
