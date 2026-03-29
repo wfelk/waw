@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Gebrauchtwagen, Unfallwagen, Fahrzeugteile & Reifen-Umziehservice"
+    "description": "Gebrauchtwagen, Unfallwagen, Fahrzeugteile & Reifenwechsel"
   },
   "sideMenu": {
     "openMenu": "Menü öffnen",
@@ -11,8 +11,10 @@
     "contact": "Kontakt"
   },
   "sectionStart": {
-    "tagline1": "Gebrauchtwagen. Unfallwagen.",
-    "tagline2": "Fahrzeugteile. Reifen-Umziehservice.",
+    "tagline1": "Gebrauchtwagen",
+    "tagline2": "Unfallwagen",
+    "tagline3": "Fahrzeugteile",
+    "tagline4": "Reifenwechsel",
     "viewListings": "Verfügbare Inserate",
     "call": "Anrufen",
     "sendEmail": "E-Mail senden",
@@ -38,8 +40,8 @@
       "description": "Unsere Unfall- und Defektfahrzeuge bieten eine hervorragende Basis für die Ersatzteilgewinnung. Ob intakte Karosserieteile, Steuergeräte oder mechanische Komponenten – wir selektieren Fahrzeuge mit hoher Restsubstanz. Wir machen kein Geheimnis aus dem Zustand. Sie erhalten von uns eine ehrliche Einschätzung, welche Aggregate noch laufen und welche Bauteile für den Ausschlachter prädestiniert sind."
     },
     "tireService": {
-      "title": "Reifen-Umzieh-Service",
-      "description": "Unsere Unfall- und Defektfahrzeuge bieten eine hervorragende Basis für die Ersatzteilgewinnung. Ob intakte Karosserieteile, Steuergeräte oder mechanische Komponenten – wir selektieren Fahrzeuge mit hoher Restsubstanz. Wir machen kein Geheimnis aus dem Zustand. Sie erhalten von uns eine ehrliche Einschätzung, welche Aggregate noch laufen und welche Bauteile für den Ausschlachter prädestiniert sind."
+      "title": "Reifenwechsel",
+      "description": "Ob saisonaler Wechsel von Sommer- auf Winterreifen oder umgekehrt – wir übernehmen den kompletten Reifenwechsel für Sie. Außerdem ziehen wir neue Reifen auf und wuchten sie fachgerecht aus. Schnell, zuverlässig und zu fairen Preisen. Vereinbaren Sie einfach einen Termin und fahren Sie mit dem richtigen Satz Reifen vom Hof."
     }
   },
   "sectionListings": {

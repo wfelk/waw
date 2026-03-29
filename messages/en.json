@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "description": "Used cars, accident vehicles, vehicle parts & tire change service"
+    "description": "Used cars, accident vehicles, vehicle parts & tire change"
   },
   "sideMenu": {
     "openMenu": "Open menu",
@@ -11,8 +11,10 @@
     "contact": "Contact"
   },
   "sectionStart": {
-    "tagline1": "Used Cars. Accident Vehicles.",
-    "tagline2": "Vehicle Parts. Tire Change Service.",
+    "tagline1": "Used Cars",
+    "tagline2": "Accident Vehicles",
+    "tagline3": "Vehicle Parts",
+    "tagline4": "Tire Change",
     "viewListings": "Available Listings",
     "call": "Call",
     "sendEmail": "Send Email",
@@ -38,8 +40,8 @@
       "description": "Our accident and defect vehicles provide an excellent basis for spare parts recovery. Whether intact body parts, control units, or mechanical components – we select vehicles with high residual substance. We make no secret of their condition. You'll receive an honest assessment from us of which assemblies still run and which parts are destined for salvage."
     },
     "tireService": {
-      "title": "Tire Change\nService",
-      "description": "Our accident and defect vehicles provide an excellent basis for spare parts recovery. Whether intact body parts, control units, or mechanical components – we select vehicles with high residual substance. We make no secret of their condition. You'll receive an honest assessment from us of which assemblies still run and which parts are destined for salvage."
+      "title": "Tire\nChange",
+      "description": "Whether it's a seasonal switch from summer to winter tires or the other way around – we handle the complete tire change for you. We also mount new tires and professionally balance them. Fast, reliable, and at fair prices. Simply book an appointment and drive off with the right set of tires."
     }
   },
   "sectionListings": {
