@@ -41,9 +41,11 @@ export const SectionStart = () => {
           </p>
         </div>
 
-        <div className="relative z-10 mt-4 text-center text-[15px] font-light text-white tablet:mt-6 tablet:text-[18px] desktop:text-[20px]">
+        <div className="font-(family-name:--font-alumni) relative z-10 mt-4 rounded-xl bg-black/40 px-8 py-6 text-center text-[27px] font-light text-white backdrop-blur-xl tablet:mt-6 tablet:text-[32px] desktop:text-[38px]">
           <p>{t("tagline1")}</p>
           <p>{t("tagline2")}</p>
+          <p>{t("tagline3")}</p>
+          <p>{t("tagline4")}</p>
         </div>
 
         <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8 tablet:mb-12 tablet:flex-row tablet:justify-center tablet:gap-6">
