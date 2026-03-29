@@ -7,11 +7,11 @@ interface Props {
 }
 
 export const Button = ({ href, children, className = "" }: Props) => {
-  return (
-    <Link
-      href={href}
-      className={`flex h-[60px] items-center justify-center gap-2 rounded-full border-[3px] border-primary bg-[#2e7a42] px-10 text-[18px] font-bold uppercase tracking-wider text-white shadow-[0px_4px_12px_0px_rgba(0,0,0,0.3)] transition-all hover:bg-primary tablet:h-[64px] tablet:px-12 tablet:text-[20px] desktop:text-[22px] ${className}`}
-    >
+  const isHash = href.startsWith("#")
+  const sharedClassName = `flex h-[60px] items-center justify-center gap-2 rounded-full border-[3px] border-primary bg-[#2e7a42] px-10 text-[18px] font-bold uppercase tracking-wider text-white shadow-[0px_4px_12px_0px_rgba(0,0,0,0.3)] transition-all hover:bg-primary tablet:h-[64px] tablet:px-12 tablet:text-[20px] desktop:text-[22px] ${className}`
+
+  const content = (
+    <>
       {children}
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +25,20 @@ export const Button = ({ href, children, className = "" }: Props) => {
           clipRule="evenodd"
         />
       </svg>
+    </>
+  )
+
+  if (isHash) {
+    return (
+      <a href={href} className={sharedClassName}>
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <Link href={href} className={sharedClassName}>
+      {content}
     </Link>
   )
 }
