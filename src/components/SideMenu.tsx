@@ -12,8 +12,8 @@ export const SideMenu = () => {
   const isMounted = useSyncExternalStore(() => () => {}, () => true, () => false);
 
   const menuItems = [
-    { href: "#start", label: t("start") },
     { href: "#about-us", label: t("aboutUs") },
+    { href: "#service", label: t("services") },
     { href: "#listings", label: t("listings") },
   ];
 
@@ -38,7 +38,7 @@ export const SideMenu = () => {
     <>
       <div className="flex items-center gap-10">
         {/* Desktop inline navigation */}
-        <nav className="hidden desktop:flex desktop:items-center desktop:gap-8">
+        <nav className="hidden tablet:flex tablet:items-center tablet:gap-8">
           {menuItems.map(({ href, label }) => (
             <a
               key={href}
@@ -55,8 +55,8 @@ export const SideMenu = () => {
           <LanguageSwitcher variant="desktop" />
         </div>
 
-        {/* Mobile/Tablet hamburger button */}
-        <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 text-gray-800 desktop:hidden">
+        {/* Mobile-only hamburger button */}
+        <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 text-gray-800 tablet:hidden">
           <Menu size={28} strokeWidth={2} />
         </button>
       </div>

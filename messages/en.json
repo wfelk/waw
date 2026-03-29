@@ -5,8 +5,8 @@
   "sideMenu": {
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "start": "Home",
     "aboutUs": "About Us",
+    "services": "Services",
     "listings": "Listings"
   },
   "sectionStart": {

@@ -5,8 +5,8 @@
   "sideMenu": {
     "openMenu": "Открыть меню",
     "closeMenu": "Закрыть меню",
-    "start": "Главная",
     "aboutUs": "О нас",
+    "services": "Услуги",
     "listings": "Объявления"
   },
   "sectionStart": {
