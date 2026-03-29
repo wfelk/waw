@@ -80,14 +80,14 @@ export const ImageSlider = () => {
   }
 
   const handleClick = (e: React.MouseEvent) => {
-    if (hasDragged.current) return
+    if (hasDragged.current || !hoverSide) return
     const rect = containerRef.current?.getBoundingClientRect()
     if (!rect) return
     const clickX = e.clientX - rect.left
     if (clickX < rect.width / 2) {
-      prev()
+      if (hasPrev) prev()
     } else {
-      next()
+      if (hasNext) next()
     }
   }
 
@@ -95,6 +95,9 @@ export const ImageSlider = () => {
 
   const hasPrev = current > 0
   const hasNext = current < SLIDE_COUNT - 1
+
+  const canNavigate =
+    hoverSide === "left" ? hasPrev : hoverSide === "right" ? hasNext : false
 
   return (
     <div className="flex w-full flex-col items-center gap-4 desktop:max-w-[900px]">
@@ -111,7 +114,7 @@ export const ImageSlider = () => {
         {/* Slides */}
         <div
           ref={containerRef}
-          className="w-full h-full overflow-hidden rounded-component touch-pan-y cursor-pointer"
+          className={`w-full h-full overflow-hidden rounded-component touch-pan-y ${canNavigate ? "desktop:cursor-pointer" : ""}`}
           onTouchStart={handleDragStart}
           onTouchMove={handleDragMove}
           onTouchEnd={handleDragEnd}
@@ -141,29 +144,31 @@ export const ImageSlider = () => {
 
         {/* Prev chevron — desktop only */}
         <div
-          className="pointer-events-none absolute left-0 top-0 flex h-full items-center pl-4 transition-all duration-300"
+          className="pointer-events-none absolute left-0 top-0 hidden h-full items-center pl-4 transition-all duration-300 desktop:flex"
           style={{
-            opacity: !hoverSide || !hasPrev ? 0 : hoverSide === "left" ? 1 : 0.3,
+            opacity:
+              !hoverSide || !hasPrev ? 0 : hoverSide === "left" ? 1 : 0.3,
           }}
         >
           <ChevronLeft
             size={64}
             strokeWidth={1.5}
-            className={`drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] transition-colors duration-300 ${hoverSide === "left" ? "text-primary" : "text-white"}`}
+            className={`transition-colors duration-300 ${hoverSide === "left" ? "text-primary" : "text-white"}`}
           />
         </div>
 
         {/* Next chevron — desktop only */}
         <div
-          className="pointer-events-none absolute right-0 top-0 flex h-full items-center pr-4 transition-all duration-300"
+          className="pointer-events-none absolute right-0 top-0 hidden h-full items-center pr-4 transition-all duration-300 desktop:flex"
           style={{
-            opacity: !hoverSide || !hasNext ? 0 : hoverSide === "right" ? 1 : 0.3,
+            opacity:
+              !hoverSide || !hasNext ? 0 : hoverSide === "right" ? 1 : 0.3,
           }}
         >
           <ChevronRight
             size={64}
             strokeWidth={1.5}
-            className={`drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)] transition-colors duration-300 ${hoverSide === "right" ? "text-primary" : "text-white"}`}
+            className={`transition-colors duration-300 ${hoverSide === "right" ? "text-primary" : "text-white"}`}
           />
         </div>
       </div>
