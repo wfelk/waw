@@ -23,7 +23,7 @@ export const SectionStart = () => {
       </header>
 
       <section id="start" className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222] tablet:min-h-[700px] desktop:min-h-[800px]">
-        <div className="pointer-events-none absolute -left-[242px] top-0 h-[693px] w-[693px] tablet:-left-[100px] tablet:h-[800px] tablet:w-[800px] desktop:left-0 desktop:h-[900px] desktop:w-[900px]">
+        <div className="pointer-events-none absolute -left-[242px] top-[120px] h-[693px] w-[693px] tablet:top-0 tablet:-left-[200px] tablet:h-[800px] tablet:w-[800px] desktop:-left-[100px] desktop:h-[900px] desktop:w-[900px]">
           <Image
             src="/images/car.png"
             alt={t("vehicleAlt")}
