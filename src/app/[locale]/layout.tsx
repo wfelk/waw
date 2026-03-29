@@ -16,6 +16,7 @@ const alumniSansSC = Alumni_Sans_SC({
   variable: "--font-alumni",
   subsets: ["latin"],
   weight: ["400", "600"],
+  adjustFontFallback: false,
 });
 
 export const generateMetadata = async ({
