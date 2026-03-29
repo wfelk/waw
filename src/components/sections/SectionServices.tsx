@@ -5,6 +5,7 @@ import { ServiceCard } from "@/components/ServiceCard"
 const SERVICES = [
   { key: "usedCars", color: "#4b5563" },
   { key: "accidentCars", color: "#374151" },
+  { key: "vehicleParts", color: "#2d3748" },
   { key: "tireService", color: "#1f2937" },
 ] as const
 
@@ -18,7 +19,7 @@ export const SectionServices = () => {
     >
       <SectionBadge title={t("title")} className="mb-10" />
 
-      <div className="grid w-full max-w-[340px] grid-cols-1 gap-10 tablet:max-w-[700px] tablet:grid-cols-2 desktop:max-w-[1100px] desktop:grid-cols-3">
+      <div className="grid w-full max-w-[340px] grid-cols-1 gap-10 tablet:max-w-[700px] tablet:grid-cols-2 desktop:max-w-[1400px] desktop:grid-cols-2">
         {SERVICES.map((service) => (
           <ServiceCard
             key={service.key}

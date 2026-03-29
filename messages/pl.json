@@ -39,6 +39,10 @@
       "title": "Sprzedaż samochodów powypadkowych",
       "description": "Nasze pojazdy powypadkowe i uszkodzone stanowią doskonałą bazę do pozyskiwania części zamiennych. Niezależnie od tego, czy chodzi o nienaruszone elementy nadwozia, sterowniki czy komponenty mechaniczne – wybieramy pojazdy o wysokiej wartości resztkowej. Nie ukrywamy stanu pojazdów. Otrzymasz od nas uczciwą ocenę tego, które podzespoły jeszcze działają, a które części nadają się do rozbiórki."
     },
+    "vehicleParts": {
+      "title": "Części\nsamochodowe",
+      "description": "Niezależnie od tego, czy potrzebujesz silnika, skrzyni biegów, elementów nadwozia czy elektroniki – oferujemy szeroki asortyment używanych części samochodowych w uczciwych cenach. Dzięki ciągłemu skupowi pojazdów stale mamy nowe części na magazynie. Zapytaj – często mamy dokładnie tę część zamienną, której potrzebuje Twój pojazd."
+    },
     "tireService": {
       "title": "Wymiana\nopon",
       "description": "Niezależnie od tego, czy chodzi o sezonową zmianę z opon letnich na zimowe, czy odwrotnie – zajmiemy się kompletną wymianą opon. Zakładamy również nowe opony i profesjonalnie je wyważamy. Szybko, niezawodnie i w uczciwych cenach. Umów się na wizytę i wyjedź na właściwym zestawie opon."

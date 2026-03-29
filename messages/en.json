@@ -39,6 +39,10 @@
       "title": "Accident Vehicle Sales",
       "description": "Our accident and defect vehicles provide an excellent basis for spare parts recovery. Whether intact body parts, control units, or mechanical components – we select vehicles with high residual substance. We make no secret of their condition. You'll receive an honest assessment from us of which assemblies still run and which parts are destined for salvage."
     },
+    "vehicleParts": {
+      "title": "Vehicle\nParts",
+      "description": "Whether it's engines, transmissions, body parts, or electronics – we offer a wide range of used vehicle parts at fair prices. Thanks to our constant vehicle purchasing, we continuously have new parts in stock. Just ask – we often have exactly the right spare part for your vehicle."
+    },
     "tireService": {
       "title": "Tire\nChange",
       "description": "Whether it's a seasonal switch from summer to winter tires or the other way around – we handle the complete tire change for you. We also mount new tires and professionally balance them. Fast, reliable, and at fair prices. Simply book an appointment and drive off with the right set of tires."
