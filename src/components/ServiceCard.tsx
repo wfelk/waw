@@ -23,7 +23,7 @@ export const ServiceCard = ({ serviceKey, color }: Props) => {
 
       {/* Description */}
       <div className="flex-1 bg-white px-5 py-5">
-        <p className="text-[11px] font-light leading-relaxed text-black tablet:text-[13px] desktop:text-[14px]">
+        <p className="text-justify text-[14px] font-light leading-relaxed text-black tablet:text-[16px] desktop:text-[18px]">
           {t(`${serviceKey}.description`)}
         </p>
       </div>

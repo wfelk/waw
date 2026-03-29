@@ -12,7 +12,7 @@ export const SectionAboutUs = () => {
       <div className="section-content flex flex-col items-center">
         <ImageSlider />
 
-        <div className="mt-8 w-[340px] text-justify text-[16px] font-light leading-relaxed text-black tablet:w-[700px] tablet:text-[18px] desktop:w-[900px] desktop:text-[18px]">
+        <div className="mt-8 w-[340px] text-justify text-[20px] font-light leading-relaxed text-black tablet:w-[700px] tablet:text-[22px] desktop:w-[900px] desktop:text-[24px]">
           <p>
             {t("welcome")} <span className="font-semibold">{t("companyName")}</span>{" "}
             {t("tagline")}
