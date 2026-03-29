@@ -1,7 +1,7 @@
-import { SectionStart } from "@/components/sections/SectionStart";
-import { SectionAboutUs } from "@/components/sections/SectionAboutUs";
-import { SectionServices } from "@/components/sections/SectionServices";
-import { SectionListings } from "@/components/sections/SectionListings";
+import { SectionStart } from "@/components/sections/SectionStart"
+import { SectionAboutUs } from "@/components/sections/SectionAboutUs"
+import { SectionServices } from "@/components/sections/SectionServices"
+import { SectionListings } from "@/components/sections/SectionListings"
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       <SectionServices />
       <SectionListings />
     </div>
-  );
+  )
 }

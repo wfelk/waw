@@ -9,7 +9,14 @@ interface Props {
   className?: string
 }
 
-export const Button = ({ href, children, icon, iconPosition = "start", size = "default", className = "" }: Props) => {
+export const Button = ({
+  href,
+  children,
+  icon,
+  iconPosition = "start",
+  size = "default",
+  className = "",
+}: Props) => {
   const isHash = href.startsWith("#")
   const isIconOnly = icon !== undefined
   const hasDefaultIcon = !isIconOnly && iconPosition === "end"
@@ -20,14 +27,16 @@ export const Button = ({ href, children, icon, iconPosition = "start", size = "d
     : size === "small"
       ? "px-5"
       : "px-10 tablet:px-12"
-  const sizeClassName = size === "small"
-    ? `flex items-center justify-center gap-1 rounded-full border-[3px] border-primary bg-[#2e7a42] ${iconPaddingClassName} py-2 text-[13px] font-semibold text-white shadow transition-all hover:bg-primary tablet:text-[14px]`
-    : `flex h-[60px] items-center justify-center gap-2 rounded-full border-[3px] border-primary bg-[#2e7a42] ${iconPaddingClassName} text-[18px] font-bold uppercase tracking-wider text-white shadow-[0px_4px_12px_0px_rgba(0,0,0,0.3)] transition-all hover:bg-primary tablet:h-[64px] tablet:text-[20px] desktop:text-[22px]`
+  const sizeClassName =
+    size === "small"
+      ? `flex items-center justify-center gap-1 rounded-full border-[3px] border-primary bg-[#2e7a42] ${iconPaddingClassName} py-2 text-[13px] font-semibold text-white shadow transition-all hover:bg-primary tablet:text-[14px]`
+      : `flex h-[60px] items-center justify-center gap-2 rounded-full border-[3px] border-primary bg-[#2e7a42] ${iconPaddingClassName} text-[18px] font-bold uppercase tracking-wider text-white shadow-[0px_4px_12px_0px_rgba(0,0,0,0.3)] transition-all hover:bg-primary tablet:h-[64px] tablet:text-[20px] desktop:text-[22px]`
   const sharedClassName = `${sizeClassName} ${className}`
 
-  const iconClassName = size === "small"
-    ? "h-4 w-4 shrink-0 opacity-60"
-    : "h-5 w-5 shrink-0 opacity-60 tablet:h-7 tablet:w-7 desktop:h-8 desktop:w-8"
+  const iconClassName =
+    size === "small"
+      ? "h-4 w-4 shrink-0 opacity-60"
+      : "h-5 w-5 shrink-0 opacity-60 tablet:h-7 tablet:w-7 desktop:h-8 desktop:w-8"
 
   const defaultIcon = (
     <svg

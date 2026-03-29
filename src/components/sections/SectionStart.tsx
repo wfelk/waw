@@ -22,7 +22,10 @@ export const SectionStart = () => {
         <SideMenu />
       </header>
 
-      <section id="start" className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222] tablet:min-h-[700px] desktop:min-h-[800px]">
+      <section
+        id="start"
+        className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222] tablet:min-h-[700px] desktop:min-h-[800px]"
+      >
         <div className="pointer-events-none absolute -left-[242px] top-[120px] h-[693px] w-[693px] tablet:top-0 tablet:-left-[200px] tablet:h-[800px] tablet:w-[800px] desktop:-left-[100px] desktop:h-[900px] desktop:w-[900px]">
           <Image
             src="/images/car.png"
@@ -35,7 +38,12 @@ export const SectionStart = () => {
 
         <div className="relative z-10 mt-[-49px] flex flex-col items-center tablet:mt-0">
           <div className="relative h-[287px] w-[287px] tablet:h-[320px] tablet:w-[320px] desktop:h-[360px] desktop:w-[360px]">
-            <Image src="/logos/logo-waw-word.png" alt="WAW" fill className="object-contain" />
+            <Image
+              src="/logos/logo-waw-word.png"
+              alt="WAW"
+              fill
+              className="object-contain"
+            />
           </div>
           <p className="font-(family-name:--font-alumni) -mt-28 text-[29.6px] font-semibold uppercase tracking-[17.75px] text-primary tablet:-mt-32 tablet:text-[36px] tablet:tracking-[20px] desktop:text-[42px] desktop:tracking-[24px]">
             Automobile
@@ -51,10 +59,18 @@ export const SectionStart = () => {
 
         <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-8 px-8 tablet:mb-12 tablet:flex-row tablet:justify-center">
           <div className="flex gap-4">
-            <Button href="mailto:info@waw-automobile.de" icon={<Mail size={24} strokeWidth={2} />} className="px-5">
+            <Button
+              href="mailto:info@waw-automobile.de"
+              icon={<Mail size={24} strokeWidth={2} />}
+              className="px-5"
+            >
               <span className="sr-only">{t("sendEmail")}</span>
             </Button>
-            <Button href="tel:+49XXXXXXXXX" icon={<Phone size={24} strokeWidth={2} />} className="px-5">
+            <Button
+              href="tel:+49XXXXXXXXX"
+              icon={<Phone size={24} strokeWidth={2} />}
+              className="px-5"
+            >
               <span className="sr-only">{t("call")}</span>
             </Button>
           </div>

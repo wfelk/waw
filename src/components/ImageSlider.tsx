@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { useState, useCallback, useRef, useEffect } from "react";
-import { useTranslations } from "next-intl";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useCallback, useRef, useEffect } from "react"
+import { useTranslations } from "next-intl"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const SLIDE_COUNT = 8;
+const SLIDE_COUNT = 8
 
 const PLACEHOLDER_COLORS = [
   "#6b7280",
@@ -15,66 +15,66 @@ const PLACEHOLDER_COLORS = [
   "#5c5470",
   "#4a5568",
   "#2d3748",
-];
+]
 
 export const ImageSlider = () => {
-  const t = useTranslations("imageSlider");
-  const [current, setCurrent] = useState(0);
-  const [dragOffset, setDragOffset] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const startX = useRef(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [slideWidth, setSlideWidth] = useState(300);
+  const t = useTranslations("imageSlider")
+  const [current, setCurrent] = useState(0)
+  const [dragOffset, setDragOffset] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const startX = useRef(0)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [slideWidth, setSlideWidth] = useState(300)
 
   useEffect(() => {
     const updateWidth = () => {
       if (containerRef.current) {
-        setSlideWidth(containerRef.current.offsetWidth);
+        setSlideWidth(containerRef.current.offsetWidth)
       }
-    };
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
+    }
+    updateWidth()
+    window.addEventListener("resize", updateWidth)
+    return () => window.removeEventListener("resize", updateWidth)
+  }, [])
 
   const prev = useCallback(() => {
-    setCurrent((c) => (c > 0 ? c - 1 : c));
-  }, []);
+    setCurrent((c) => (c > 0 ? c - 1 : c))
+  }, [])
 
   const next = useCallback(() => {
-    setCurrent((c) => (c < SLIDE_COUNT - 1 ? c + 1 : c));
-  }, []);
+    setCurrent((c) => (c < SLIDE_COUNT - 1 ? c + 1 : c))
+  }, [])
 
   const getClientX = (e: React.TouchEvent | React.MouseEvent) => {
-    if ("touches" in e) return e.touches[0].clientX;
-    return e.clientX;
-  };
+    if ("touches" in e) return e.touches[0].clientX
+    return e.clientX
+  }
 
   const handleDragStart = (e: React.TouchEvent | React.MouseEvent) => {
-    setIsDragging(true);
-    startX.current = getClientX(e);
-    setDragOffset(0);
-  };
+    setIsDragging(true)
+    startX.current = getClientX(e)
+    setDragOffset(0)
+  }
 
   const handleDragMove = (e: React.TouchEvent | React.MouseEvent) => {
-    if (!isDragging) return;
-    const currentX = "touches" in e ? e.touches[0].clientX : e.clientX;
-    setDragOffset(currentX - startX.current);
-  };
+    if (!isDragging) return
+    const currentX = "touches" in e ? e.touches[0].clientX : e.clientX
+    setDragOffset(currentX - startX.current)
+  }
 
   const handleDragEnd = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-    const threshold = 50;
+    if (!isDragging) return
+    setIsDragging(false)
+    const threshold = 50
     if (dragOffset < -threshold) {
-      next();
+      next()
     } else if (dragOffset > threshold) {
-      prev();
+      prev()
     }
-    setDragOffset(0);
-  };
+    setDragOffset(0)
+  }
 
-  const translateX = -(current * slideWidth) + dragOffset;
+  const translateX = -(current * slideWidth) + dragOffset
 
   return (
     <div className="flex flex-col items-center gap-4">
@@ -91,7 +91,7 @@ export const ImageSlider = () => {
           onMouseMove={handleDragMove}
           onMouseUp={handleDragEnd}
           onMouseLeave={() => {
-            if (isDragging) handleDragEnd();
+            if (isDragging) handleDragEnd()
           }}
         >
           <div
@@ -117,7 +117,11 @@ export const ImageSlider = () => {
           aria-label={t("previousImage")}
           className="absolute left-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-all hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:left-[-16px] tablet:h-[42px] tablet:w-[42px]"
         >
-          <ChevronLeft size={16} strokeWidth={3} className="tablet:size-[22px]" />
+          <ChevronLeft
+            size={16}
+            strokeWidth={3}
+            className="tablet:size-[22px]"
+          />
         </button>
 
         {/* Next arrow */}
@@ -127,7 +131,11 @@ export const ImageSlider = () => {
           aria-label={t("nextImage")}
           className="absolute right-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:right-[-16px] tablet:h-[42px] tablet:w-[42px]"
         >
-          <ChevronRight size={16} strokeWidth={3} className="tablet:size-[22px]" />
+          <ChevronRight
+            size={16}
+            strokeWidth={3}
+            className="tablet:size-[22px]"
+          />
         </button>
       </div>
 
@@ -145,5 +153,5 @@ export const ImageSlider = () => {
         ))}
       </div>
     </div>
-  );
+  )
 }

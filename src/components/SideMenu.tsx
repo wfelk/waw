@@ -1,38 +1,42 @@
-"use client";
+"use client"
 
-import { useState, useEffect, useSyncExternalStore } from "react";
-import { createPortal } from "react-dom";
-import { useTranslations } from "next-intl";
-import { Menu, X } from "lucide-react";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useState, useEffect, useSyncExternalStore } from "react"
+import { createPortal } from "react-dom"
+import { useTranslations } from "next-intl"
+import { Menu, X } from "lucide-react"
+import { LanguageSwitcher } from "@/components/LanguageSwitcher"
 
 export const SideMenu = () => {
-  const t = useTranslations("sideMenu");
-  const [isOpen, setIsOpen] = useState(false);
-  const isMounted = useSyncExternalStore(() => () => {}, () => true, () => false);
+  const t = useTranslations("sideMenu")
+  const [isOpen, setIsOpen] = useState(false)
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  )
 
   const menuItems = [
     { href: "#about-us", label: t("aboutUs") },
     { href: "#service", label: t("services") },
     { href: "#listings", label: t("listings") },
-  ];
+  ]
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflowY = "scroll";
-      document.body.style.position = "fixed";
-      document.body.style.inset = "0";
+      document.body.style.overflowY = "scroll"
+      document.body.style.position = "fixed"
+      document.body.style.inset = "0"
     } else {
-      document.body.style.overflowY = "";
-      document.body.style.position = "";
-      document.body.style.inset = "";
+      document.body.style.overflowY = ""
+      document.body.style.position = ""
+      document.body.style.inset = ""
     }
     return () => {
-      document.body.style.overflowY = "";
-      document.body.style.position = "";
-      document.body.style.inset = "";
-    };
-  }, [isOpen]);
+      document.body.style.overflowY = ""
+      document.body.style.position = ""
+      document.body.style.inset = ""
+    }
+  }, [isOpen])
 
   return (
     <>
@@ -56,7 +60,11 @@ export const SideMenu = () => {
         </div>
 
         {/* Mobile-only hamburger button */}
-        <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 text-gray-800 tablet:hidden">
+        <button
+          onClick={() => setIsOpen(true)}
+          aria-label={t("openMenu")}
+          className="p-2 text-gray-800 tablet:hidden"
+        >
           <Menu size={28} strokeWidth={2} />
         </button>
       </div>
@@ -79,7 +87,11 @@ export const SideMenu = () => {
               }`}
             >
               <div className="flex items-center justify-end p-4">
-                <button onClick={() => setIsOpen(false)} aria-label={t("closeMenu")} className="p-2">
+                <button
+                  onClick={() => setIsOpen(false)}
+                  aria-label={t("closeMenu")}
+                  className="p-2"
+                >
                   <X size={24} strokeWidth={2} color="#333" />
                 </button>
               </div>
@@ -100,12 +112,15 @@ export const SideMenu = () => {
 
               {/* Language switcher — mobile only */}
               <div className="mt-auto bg-gray-200 tablet:hidden">
-                <LanguageSwitcher variant="mobile" onSelect={() => setIsOpen(false)} />
+                <LanguageSwitcher
+                  variant="mobile"
+                  onSelect={() => setIsOpen(false)}
+                />
               </div>
             </nav>
           </>,
           document.body,
         )}
     </>
-  );
+  )
 }

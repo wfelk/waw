@@ -58,7 +58,10 @@ export const LanguageSwitcher = ({ variant, onSelect }: Props) => {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
         setIsOpen(false)
       }
     }
@@ -74,7 +77,8 @@ export const LanguageSwitcher = ({ variant, onSelect }: Props) => {
     onSelect?.()
   }
 
-  const currentLanguage = languages.find((l) => l.code === locale) ?? languages[0]
+  const currentLanguage =
+    languages.find((l) => l.code === locale) ?? languages[0]
 
   if (variant === "mobile") {
     return (
@@ -123,9 +127,11 @@ export const LanguageSwitcher = ({ variant, onSelect }: Props) => {
                   : "text-gray-700 hover:bg-gray-300"
               }`}
             >
-              <span className={`flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border-2 ${
-                code === locale ? "border-primary" : "border-gray-400"
-              }`}>
+              <span
+                className={`flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border-2 ${
+                  code === locale ? "border-primary" : "border-gray-400"
+                }`}
+              >
                 {flag}
               </span>
               {label}
