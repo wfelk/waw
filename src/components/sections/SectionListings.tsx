@@ -23,7 +23,7 @@ export const SectionListings = () => {
     >
       <SectionBadge title={t("title")} />
 
-      <div className="grid w-full max-w-[340px] grid-cols-1 gap-5 tablet:max-w-[700px] tablet:grid-cols-2 tablet:gap-6 desktop:max-w-[1100px] desktop:grid-cols-3 desktop:gap-8">
+      <div className="section-content grid grid-cols-1 gap-5 tablet:grid-cols-2 tablet:gap-6 desktop:grid-cols-3 desktop:gap-8">
         {MOCK_LISTINGS.map((car) => (
           <ListingCard
             key={car.id}

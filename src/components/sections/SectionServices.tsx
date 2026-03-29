@@ -19,7 +19,7 @@ export const SectionServices = () => {
     >
       <SectionBadge title={t("title")} className="mb-10" />
 
-      <div className="grid w-full max-w-[340px] grid-cols-1 gap-10 tablet:max-w-[700px] tablet:grid-cols-2 desktop:max-w-[1400px] desktop:grid-cols-2">
+      <div className="section-content grid grid-cols-1 gap-10 tablet:grid-cols-2">
         {SERVICES.map((service) => (
           <ServiceCard
             key={service.key}
