@@ -31,12 +31,12 @@
     "title": "Services",
     "image": "Image",
     "usedCars": {
-      "title": "Used Car Sales",
-      "description": "Our range is as diverse as our customers. Looking for an economical city car, a reliable estate for the family, or a robust vehicle for commercial use? Through our constant purchasing – including accident vehicles – we often find specialty vehicles for hobbyists or export."
+      "title": "Used Cars:\nBuying & Selling",
+      "description": "We buy and sell used cars of all kinds. Whether you're looking for an economical city car, a reliable estate for the family, or a robust vehicle for commercial use – we offer a diverse selection. Want to sell your vehicle? We'll make you a fair offer – quick and hassle-free."
     },
     "accidentCars": {
-      "title": "Accident Vehicle Sales",
-      "description": "Our accident and defect vehicles provide an excellent basis for spare parts recovery. Whether intact body parts, control units, or mechanical components – we select vehicles with high residual substance. We make no secret of their condition. You'll receive an honest assessment from us of which assemblies still run and which parts are destined for salvage."
+      "title": "Accident Cars:\nBuying & Selling",
+      "description": "We buy and sell accident and defect vehicles. Have a damaged car? We'll take it off your hands at a fair price. At the same time, we offer accident and defect vehicles for sale – ideal for spare parts recovery, hobbyists, or export. An honest assessment of the condition is guaranteed."
     },
     "vehicleParts": {
       "title": "Vehicle\nParts",

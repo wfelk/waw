@@ -31,12 +31,12 @@
     "title": "Usługi",
     "image": "Zdjęcie",
     "usedCars": {
-      "title": "Sprzedaż samochodów używanych",
-      "description": "Nasz asortyment jest tak różnorodny jak nasi klienci. Szukasz oszczędnego auta miejskiego, niezawodnego kombi dla rodziny czy solidnego pojazdu do użytku komercyjnego? Dzięki ciągłemu skupowi – również pojazdów powypadkowych – często znajdujemy pojazdy specjalistyczne dla majsterkowiczów lub na eksport."
+      "title": "Samochody używane:\nSkup i sprzedaż",
+      "description": "Skupujemy i sprzedajemy samochody używane wszelkiego rodzaju. Niezależnie czy szukasz oszczędnego auta miejskiego, niezawodnego kombi dla rodziny czy solidnego pojazdu do użytku komercyjnego – oferujemy różnorodny wybór. Chcesz sprzedać swój pojazd? Złożymy Ci uczciwą ofertę – szybko i bez komplikacji."
     },
     "accidentCars": {
-      "title": "Sprzedaż samochodów powypadkowych",
-      "description": "Nasze pojazdy powypadkowe i uszkodzone stanowią doskonałą bazę do pozyskiwania części zamiennych. Niezależnie od tego, czy chodzi o nienaruszone elementy nadwozia, sterowniki czy komponenty mechaniczne – wybieramy pojazdy o wysokiej wartości resztkowej. Nie ukrywamy stanu pojazdów. Otrzymasz od nas uczciwą ocenę tego, które podzespoły jeszcze działają, a które części nadają się do rozbiórki."
+      "title": "Samochody powypadkowe:\nSkup i sprzedaż",
+      "description": "Skupujemy i sprzedajemy samochody powypadkowe oraz pojazdy z usterkami. Masz uszkodzony pojazd? Odkupimy go w uczciwej cenie. Jednocześnie oferujemy pojazdy powypadkowe i uszkodzone na sprzedaż – idealne do pozyskiwania części zamiennych, dla majsterkowiczów lub na eksport. Uczciwa ocena stanu gwarantowana."
     },
     "vehicleParts": {
       "title": "Części\nsamochodowe",
