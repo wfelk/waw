@@ -29,7 +29,7 @@
 
 @utility section-content {
   width: 100%;
-  max-width: 340px;
+  max-width: 450px;
   margin-inline: auto;
 
   @media (width >= theme(--breakpoint-tablet)) {

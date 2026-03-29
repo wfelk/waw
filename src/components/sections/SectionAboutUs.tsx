@@ -15,7 +15,7 @@ export const SectionAboutUs = () => {
       <div className="section-content flex flex-col items-center">
         <ImageSlider />
 
-        <div className="mt-8 w-full max-w-[340px] text-justify text-[14px] font-light leading-relaxed text-black tablet:max-w-[700px] tablet:text-[22px] desktop:max-w-[900px] desktop:text-[24px]">
+        <div className="mt-8 w-full max-w-[450px] text-justify text-[14px] font-light leading-relaxed text-black tablet:max-w-[700px] tablet:text-[22px] desktop:max-w-[900px] desktop:text-[24px]">
           <p>
             {t("welcome")}{" "}
             <span className="font-semibold">{t("companyName")}</span>{" "}
