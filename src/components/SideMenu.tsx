@@ -4,6 +4,7 @@ import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export const SideMenu = () => {
   const t = useTranslations("sideMenu");
@@ -35,23 +36,30 @@ export const SideMenu = () => {
 
   return (
     <>
-      {/* Desktop inline navigation */}
-      <nav className="hidden desktop:flex desktop:items-center desktop:gap-8">
-        {menuItems.map(({ href, label }) => (
-          <a
-            key={href}
-            href={href}
-            className="text-[16px] font-semibold text-gray-800 transition-colors hover:text-primary"
-          >
-            {label}
-          </a>
-        ))}
-      </nav>
+      <div className="flex items-center gap-10">
+        {/* Desktop inline navigation */}
+        <nav className="hidden desktop:flex desktop:items-center desktop:gap-8">
+          {menuItems.map(({ href, label }) => (
+            <a
+              key={href}
+              href={href}
+              className="text-[16px] font-semibold text-gray-800 transition-colors hover:text-primary"
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
 
-      {/* Mobile/Tablet hamburger button */}
-      <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 text-gray-800 desktop:hidden">
-        <Menu size={28} strokeWidth={2} />
-      </button>
+        {/* Language switcher — tablet and wider */}
+        <div className="hidden tablet:block">
+          <LanguageSwitcher variant="desktop" />
+        </div>
+
+        {/* Mobile/Tablet hamburger button */}
+        <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 text-gray-800 desktop:hidden">
+          <Menu size={28} strokeWidth={2} />
+        </button>
+      </div>
 
       {isMounted &&
         createPortal(
@@ -66,7 +74,7 @@ export const SideMenu = () => {
 
             {/* Drawer */}
             <nav
-              className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-gray-200 shadow-xl transition-transform duration-300 desktop:hidden ${
+              className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-white shadow-xl transition-transform duration-300 desktop:hidden ${
                 isOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
@@ -89,6 +97,11 @@ export const SideMenu = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Language switcher — mobile only */}
+              <div className="mt-auto bg-gray-200 tablet:hidden">
+                <LanguageSwitcher variant="mobile" onSelect={() => setIsOpen(false)} />
+              </div>
             </nav>
           </>,
           document.body,
