@@ -49,7 +49,7 @@ export const SectionStart = () => {
           <p>{t("tagline4")}</p>
         </div>
 
-        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-8 px-8 tablet:mb-12">
+        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-8 px-8 tablet:mb-12 tablet:flex-row tablet:justify-center">
           <div className="flex gap-4">
             <Button href="mailto:info@waw-automobile.de" icon={<Mail size={24} strokeWidth={2} />} className="px-5">
               <span className="sr-only">{t("sendEmail")}</span>
