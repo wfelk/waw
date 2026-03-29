@@ -3,7 +3,7 @@
 import { useState, useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 export const SideMenu = () => {
   const t = useTranslations("sideMenu");
@@ -51,7 +51,7 @@ export const SideMenu = () => {
 
       {/* Mobile/Tablet hamburger button */}
       <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 desktop:hidden">
-        <Image src="/images/menu-icon.svg" alt="" width={33} height={22} />
+        <Menu size={28} strokeWidth={2} />
       </button>
 
       {isMounted &&
@@ -73,10 +73,7 @@ export const SideMenu = () => {
             >
               <div className="flex items-center justify-end p-4">
                 <button onClick={() => setIsOpen(false)} aria-label={t("closeMenu")} className="p-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" strokeWidth="2" strokeLinecap="round">
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                  </svg>
+                  <X size={24} strokeWidth={2} color="#333" />
                 </button>
               </div>
 

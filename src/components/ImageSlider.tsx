@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SLIDE_COUNT = 8;
 
@@ -113,22 +114,18 @@ export const ImageSlider = () => {
         <button
           onClick={prev}
           aria-label={t("previousImage")}
-          className="absolute left-[-16px] top-1/2 -translate-y-1/2 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-white/80 text-gray-700 shadow transition-colors hover:bg-white"
+          className="absolute left-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black"
         >
-          <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
-            <path d="M8.5 1L1.5 8L8.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <ChevronLeft size={22} strokeWidth={3} />
         </button>
 
         {/* Next arrow */}
         <button
           onClick={next}
           aria-label={t("nextImage")}
-          className="absolute right-[-16px] top-1/2 -translate-y-1/2 flex h-[32px] w-[32px] items-center justify-center rounded-full bg-white/80 text-gray-700 shadow transition-colors hover:bg-white"
+          className="absolute right-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black"
         >
-          <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
-            <path d="M1.5 1L8.5 8L1.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <ChevronRight size={22} strokeWidth={3} />
         </button>
       </div>
 

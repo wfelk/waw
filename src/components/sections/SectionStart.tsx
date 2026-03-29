@@ -9,9 +9,9 @@ export const SectionStart = () => {
   return (
     <>
       <header className="relative z-10 flex h-[98px] items-center justify-between bg-white pr-4 tablet:h-[110px] tablet:px-8 desktop:h-[120px] desktop:px-16">
-        <div className="relative h-[80px] w-[160px] shrink-0 tablet:h-[90px] tablet:w-[180px]">
+        <div className="relative h-[30px] w-[130px] shrink-0 tablet:h-[34px] tablet:w-[148px] desktop:h-[38px] desktop:w-[166px]">
           <Image
-            src="/images/waw-logo.svg"
+            src="/logos/logo-waw-picture.svg"
             alt="WAW Automobile Logo"
             fill
             className="object-contain"
@@ -24,7 +24,7 @@ export const SectionStart = () => {
       <section id="start" className="relative flex min-h-[810px] flex-col items-center overflow-hidden bg-gradient-to-b from-transparent to-[#222] tablet:min-h-[700px] desktop:min-h-[800px]">
         <div className="pointer-events-none absolute -left-[242px] top-0 h-[693px] w-[693px] tablet:-left-[100px] tablet:h-[800px] tablet:w-[800px] desktop:left-0 desktop:h-[900px] desktop:w-[900px]">
           <Image
-            src="/images/gradient-car.png"
+            src="/images/car.png"
             alt={t("vehicleAlt")}
             fill
             className="-scale-x-100 object-cover"
@@ -34,7 +34,7 @@ export const SectionStart = () => {
 
         <div className="relative z-10 mt-[-49px] flex flex-col items-center tablet:mt-0">
           <div className="relative h-[287px] w-[287px] tablet:h-[320px] tablet:w-[320px] desktop:h-[360px] desktop:w-[360px]">
-            <Image src="/images/waw-logo.png" alt="WAW" fill className="object-contain" />
+            <Image src="/logos/logo-waw-word.png" alt="WAW" fill className="object-contain" />
           </div>
           <p className="font-(family-name:--font-alumni) -mt-28 text-[29.6px] font-semibold uppercase tracking-[17.75px] text-primary tablet:-mt-32 tablet:text-[36px] tablet:tracking-[20px] desktop:text-[42px] desktop:tracking-[24px]">
             Automobile
