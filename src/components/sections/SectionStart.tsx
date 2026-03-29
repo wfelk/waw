@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { SideMenu } from "@/components/SideMenu"
 import { ContactBar } from "@/components/ContactBar"
+import { Button } from "@/components/Button"
 
 export const SectionStart = () => {
   const t = useTranslations("sectionStart")
@@ -49,12 +50,9 @@ export const SectionStart = () => {
         </div>
 
         <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8 tablet:mb-12 tablet:flex-row tablet:justify-center tablet:gap-6">
-          <a
-            href="#listings"
-            className="flex h-[79px] w-[338px] items-center justify-center rounded-[30px] bg-primary text-[20px] font-semibold text-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] transition-opacity hover:opacity-90 tablet:w-[300px] tablet:text-[22px] desktop:w-[340px]"
-          >
+          <Button href="#listings">
             {t("viewListings")}
-          </a>
+          </Button>
 
           <ContactBar />
         </div>
