@@ -79,7 +79,7 @@ export const ImageSlider = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       {/* Slider */}
-      <div className="relative w-[340px] h-[250px] tablet:w-[700px] tablet:h-[476px] desktop:w-[900px] desktop:h-[600px]">
+      <div className="relative w-full aspect-[340/250] tablet:w-[700px] tablet:aspect-[700/476] desktop:w-[900px] desktop:aspect-[900/600]">
         {/* Slides */}
         <div
           ref={containerRef}
@@ -115,9 +115,9 @@ export const ImageSlider = () => {
           onClick={prev}
           disabled={current === 0}
           aria-label={t("previousImage")}
-          className="absolute left-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30"
+          className="absolute left-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:left-[-16px] tablet:h-[42px] tablet:w-[42px]"
         >
-          <ChevronLeft size={22} strokeWidth={3} />
+          <ChevronLeft size={16} strokeWidth={3} className="tablet:size-[22px]" />
         </button>
 
         {/* Next arrow */}
@@ -125,9 +125,9 @@ export const ImageSlider = () => {
           onClick={next}
           disabled={current === SLIDE_COUNT - 1}
           aria-label={t("nextImage")}
-          className="absolute right-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30"
+          className="absolute right-[-12px] top-1/2 -translate-y-1/2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30 tablet:right-[-16px] tablet:h-[42px] tablet:w-[42px]"
         >
-          <ChevronRight size={22} strokeWidth={3} />
+          <ChevronRight size={16} strokeWidth={3} className="tablet:size-[22px]" />
         </button>
       </div>
 

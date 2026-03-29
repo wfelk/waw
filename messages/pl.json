@@ -7,15 +7,14 @@
     "closeMenu": "Zamknij menu",
     "start": "Start",
     "aboutUs": "O nas",
-    "listings": "Ogłoszenia",
-    "contact": "Kontakt"
+    "listings": "Ogłoszenia"
   },
   "sectionStart": {
     "tagline1": "Samochody używane",
     "tagline2": "Powypadkowe",
     "tagline3": "Części samochodowe",
     "tagline4": "Wymiana opon",
-    "viewListings": "Dostępne ogłoszenia",
+    "viewListings": "Ogłoszenia",
     "call": "Zadzwoń",
     "sendEmail": "Wyślij e-mail",
     "sendMessage": "Wyślij wiadomość",

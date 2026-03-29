@@ -14,7 +14,6 @@ export const SideMenu = () => {
     { href: "#start", label: t("start") },
     { href: "#about-us", label: t("aboutUs") },
     { href: "#listings", label: t("listings") },
-    { href: "#contact", label: t("contact") },
   ];
 
   useEffect(() => {
@@ -50,7 +49,7 @@ export const SideMenu = () => {
       </nav>
 
       {/* Mobile/Tablet hamburger button */}
-      <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 desktop:hidden">
+      <button onClick={() => setIsOpen(true)} aria-label={t("openMenu")} className="p-2 text-gray-800 desktop:hidden">
         <Menu size={28} strokeWidth={2} />
       </button>
 
@@ -67,7 +66,7 @@ export const SideMenu = () => {
 
             {/* Drawer */}
             <nav
-              className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-white shadow-xl transition-transform duration-300 desktop:hidden ${
+              className={`fixed right-0 top-0 z-50 flex h-full w-[260px] flex-col bg-gray-200 shadow-xl transition-transform duration-300 desktop:hidden ${
                 isOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >

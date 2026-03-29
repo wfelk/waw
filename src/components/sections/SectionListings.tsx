@@ -19,7 +19,7 @@ export const SectionListings = () => {
   return (
     <section
       id="listings"
-      className="flex flex-col items-center bg-white px-6 py-12 tablet:px-12 tablet:py-16 desktop:px-20 desktop:py-20"
+      className="flex flex-col items-center bg-gray-100 px-6 py-12 tablet:px-12 tablet:py-16 desktop:px-20 desktop:py-20"
     >
       <SectionBadge title={t("title")} />
 

@@ -7,15 +7,14 @@
     "closeMenu": "Закрыть меню",
     "start": "Главная",
     "aboutUs": "О нас",
-    "listings": "Объявления",
-    "contact": "Контакт"
+    "listings": "Объявления"
   },
   "sectionStart": {
     "tagline1": "Подержанные авто",
     "tagline2": "Аварийные авто",
     "tagline3": "Автозапчасти",
     "tagline4": "Замена шин",
-    "viewListings": "Доступные объявления",
+    "viewListings": "Объявления",
     "call": "Позвонить",
     "sendEmail": "Написать e-mail",
     "sendMessage": "Отправить сообщение",

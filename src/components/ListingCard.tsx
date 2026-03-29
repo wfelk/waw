@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl"
+import { Button } from "@/components/Button"
 
 interface Props {
   title: string
@@ -12,7 +13,7 @@ export const ListingCard = ({ title, year, km, price, color }: Props) => {
   const t = useTranslations("sectionListings")
 
   return (
-    <div className="overflow-hidden rounded-component bg-[#f5f5f5] shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.12)]">
+    <div className="overflow-hidden rounded-component bg-white shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.12)]">
       {/* Mock image */}
       <div
         className="flex h-[180px] w-full items-center justify-center text-[14px] text-white/40 select-none tablet:h-[200px] lg:h-[220px]"
@@ -35,9 +36,9 @@ export const ListingCard = ({ title, year, km, price, color }: Props) => {
           <span className="text-[20px] font-bold text-primary tablet:text-[22px]">
             {price} &euro;
           </span>
-          <button className="rounded-[12px] bg-primary px-5 py-2 text-[13px] font-semibold text-white shadow transition-opacity hover:opacity-80 tablet:text-[14px]">
+          <Button href="#" size="small" iconPosition="end">
             {t("details")}
-          </button>
+          </Button>
         </div>
       </div>
     </div>

@@ -7,15 +7,14 @@
     "closeMenu": "Menü schließen",
     "start": "Start",
     "aboutUs": "Über Uns",
-    "listings": "Inserate",
-    "contact": "Kontakt"
+    "listings": "Inserate"
   },
   "sectionStart": {
     "tagline1": "Gebrauchtwagen",
     "tagline2": "Unfallwagen",
     "tagline3": "Fahrzeugteile",
     "tagline4": "Reifenwechsel",
-    "viewListings": "Verfügbare Inserate",
+    "viewListings": "Inserate",
     "call": "Anrufen",
     "sendEmail": "E-Mail senden",
     "sendMessage": "Nachricht senden",

@@ -7,15 +7,14 @@
     "closeMenu": "Close menu",
     "start": "Home",
     "aboutUs": "About Us",
-    "listings": "Listings",
-    "contact": "Contact"
+    "listings": "Listings"
   },
   "sectionStart": {
     "tagline1": "Used Cars",
     "tagline2": "Accident Vehicles",
     "tagline3": "Vehicle Parts",
     "tagline4": "Tire Change",
-    "viewListings": "Available Listings",
+    "viewListings": "Listings",
     "call": "Call",
     "sendEmail": "Send Email",
     "sendMessage": "Send Message",

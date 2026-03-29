@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+import { Phone, Mail } from "lucide-react"
 import { SideMenu } from "@/components/SideMenu"
-import { ContactBar } from "@/components/ContactBar"
 import { Button } from "@/components/Button"
 
 export const SectionStart = () => {
@@ -9,7 +9,7 @@ export const SectionStart = () => {
 
   return (
     <>
-      <header className="relative z-10 flex h-[98px] items-center justify-between bg-white pr-4 tablet:h-[110px] tablet:px-8 desktop:h-[120px] desktop:px-16">
+      <header className="relative z-10 flex h-[75px] items-center justify-between bg-white pr-4 tablet:h-[110px] tablet:px-8 desktop:h-[120px] desktop:px-16">
         <div className="relative h-[30px] w-[130px] shrink-0 tablet:h-[34px] tablet:w-[148px] desktop:h-[38px] desktop:w-[166px]">
           <Image
             src="/logos/logo-waw-picture.svg"
@@ -42,19 +42,26 @@ export const SectionStart = () => {
           </p>
         </div>
 
-        <div className="font-(family-name:--font-alumni) relative z-10 mt-4 rounded-xl bg-black/40 px-8 py-6 text-center text-[27px] font-light text-white backdrop-blur-xl tablet:mt-6 tablet:text-[32px] desktop:text-[38px]">
+        <div className="font-(family-name:--font-alumni) relative z-10 mt-4 tablet:mb-10 desktop:mb-16 rounded-xl bg-black/40 px-8 py-6 text-center text-[27px] font-light text-white backdrop-blur-xl tablet:mt-6 tablet:text-[32px] desktop:text-[38px]">
           <p>{t("tagline1")}</p>
           <p>{t("tagline2")}</p>
           <p>{t("tagline3")}</p>
           <p>{t("tagline4")}</p>
         </div>
 
-        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-4 px-8 tablet:mb-12 tablet:flex-row tablet:justify-center tablet:gap-6">
-          <Button href="#listings">
+        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-8 px-8 tablet:mb-12">
+          <div className="flex gap-4">
+            <Button href="mailto:info@waw-automobile.de" icon={<Mail size={24} strokeWidth={2} />} className="px-5">
+              <span className="sr-only">{t("sendEmail")}</span>
+            </Button>
+            <Button href="tel:+49XXXXXXXXX" icon={<Phone size={24} strokeWidth={2} />} className="px-5">
+              <span className="sr-only">{t("call")}</span>
+            </Button>
+          </div>
+
+          <Button href="#listings" iconPosition="end">
             {t("viewListings")}
           </Button>
-
-          <ContactBar />
         </div>
       </section>
 
