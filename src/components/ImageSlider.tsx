@@ -79,7 +79,7 @@ export const ImageSlider = () => {
   return (
     <div className="flex flex-col items-center gap-4">
       {/* Slider */}
-      <div className="relative w-[300px] h-[220px] tablet:w-[500px] tablet:h-[340px] desktop:w-[600px] desktop:h-[400px]">
+      <div className="relative w-[340px] h-[250px] tablet:w-[700px] tablet:h-[476px] desktop:w-[900px] desktop:h-[600px]">
         {/* Slides */}
         <div
           ref={containerRef}
@@ -113,8 +113,9 @@ export const ImageSlider = () => {
         {/* Prev arrow */}
         <button
           onClick={prev}
+          disabled={current === 0}
           aria-label={t("previousImage")}
-          className="absolute left-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black"
+          className="absolute left-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30"
         >
           <ChevronLeft size={22} strokeWidth={3} />
         </button>
@@ -122,8 +123,9 @@ export const ImageSlider = () => {
         {/* Next arrow */}
         <button
           onClick={next}
+          disabled={current === SLIDE_COUNT - 1}
           aria-label={t("nextImage")}
-          className="absolute right-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black"
+          className="absolute right-[-16px] top-1/2 -translate-y-1/2 flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow transition-colors hover:bg-black disabled:cursor-default disabled:opacity-30"
         >
           <ChevronRight size={22} strokeWidth={3} />
         </button>
