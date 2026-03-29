@@ -57,31 +57,33 @@ export const SectionStart = () => {
           <p>{t("tagline4")}</p>
         </div>
 
-        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center gap-8 px-8 tablet:mb-12 tablet:flex-row tablet:justify-center">
-          <div className="flex gap-4">
-            <Button
-              href="mailto:info@waw-automobile.de"
-              icon={<Mail size={24} strokeWidth={2} />}
-              className="px-5"
-            >
-              <span className="sr-only">{t("sendEmail")}</span>
-            </Button>
-            <Button
-              href="tel:+49XXXXXXXXX"
-              icon={<Phone size={24} strokeWidth={2} />}
-              className="px-5"
-            >
-              <span className="sr-only">{t("call")}</span>
+        <div className="relative z-10 mt-auto mb-8 flex w-full flex-col items-center px-8 tablet:mb-12 tablet:flex-row tablet:justify-center tablet:gap-8">
+          <div className="flex w-full max-w-fit flex-col gap-4 tablet:contents">
+            <div className="flex gap-4">
+              <Button
+                href="mailto:info@waw-automobile.de"
+                icon={<Mail size={24} strokeWidth={2} />}
+                className="px-5"
+              >
+                <span className="sr-only">{t("sendEmail")}</span>
+              </Button>
+              <Button
+                href="tel:+49XXXXXXXXX"
+                icon={<Phone size={24} strokeWidth={2} />}
+                className="px-5"
+              >
+                <span className="sr-only">{t("call")}</span>
+              </Button>
+            </div>
+
+            <Button href="#listings" iconPosition="end" className="w-full tablet:w-auto">
+              {t("viewListings")}
             </Button>
           </div>
-
-          <Button href="#listings" iconPosition="end">
-            {t("viewListings")}
-          </Button>
         </div>
       </section>
 
-      <div className="mx-auto h-[7px] w-full max-w-[416px] rounded-component bg-black tablet:max-w-none" />
+      <div className="mx-auto h-[7px] w-full rounded-component bg-black" />
     </>
   )
 }
