@@ -18,6 +18,7 @@
     "call": "Call",
     "sendEmail": "Send Email",
     "whatsapp": "Message on WhatsApp",
+    "telegram": "Message on Telegram",
     "sendMessage": "Send Message",
     "vehicleAlt": "Vehicle"
   },
