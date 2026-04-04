@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "description": "Mașini second-hand, vehicule avariate, piese auto & schimb de anvelope"
+  },
+  "sideMenu": {
+    "openMenu": "Deschide meniul",
+    "closeMenu": "Închide meniul",
+    "aboutUs": "Despre noi",
+    "services": "Servicii",
+    "listings": "Anunțuri"
+  },
+  "sectionStart": {
+    "tagline1": "Mașini second-hand",
+    "tagline2": "Vehicule avariate",
+    "tagline3": "Piese auto",
+    "tagline4": "Schimb de anvelope",
+    "viewListings": "Anunțuri",
+    "call": "Sună",
+    "sendEmail": "Trimite e-mail",
+    "sendMessage": "Trimite mesaj",
+    "vehicleAlt": "Vehicul"
+  },
+  "sectionAboutUs": {
+    "title": "Despre noi",
+    "welcome": "Bine ați venit la",
+    "companyName": "WAW Automobile",
+    "tagline": "– expertul dumneavoastră pentru mobilitate la a doua șansă.",
+    "description": "Ceea ce a început ca o mică pasiune pentru motoare a crescut de-a lungul anilor într-o afacere de familie versatilă. Credem că fiecare vehicul are valoare – fie că strălucește în showroom, fie că are nevoie de o a doua șansă după un accident."
+  },
+  "sectionServices": {
+    "title": "Servicii",
+    "image": "Imagine",
+    "usedCars": {
+      "title": "Mașini second-hand:\nCumpărare & Vânzare",
+      "description": "Cumpărăm și vindem mașini second-hand de toate tipurile. Fie că sunteți în căutarea unui vehicul economic pentru oraș, un break fiabil pentru familie sau un vehicul robust pentru uz comercial – vă oferim o selecție diversificată. Doriți să vă vindeți vehiculul? Vă facem o ofertă corectă – rapid și fără bătăi de cap."
+    },
+    "accidentCars": {
+      "title": "Vehicule avariate:\nCumpărare & Vânzare",
+      "description": "Cumpărăm și vindem vehicule avariate și defecte. Aveți o mașină avariată? O preluăm la un preț corect. În același timp, oferim vehicule avariate și defecte spre vânzare – ideale pentru recuperarea pieselor, pasionați sau export. O evaluare sinceră a stării este garantată."
+    },
+    "vehicleParts": {
+      "title": "Piese\nauto",
+      "description": "Fie că este vorba de motoare, cutii de viteze, piese de caroserie sau electronică – oferim o gamă largă de piese auto second-hand la prețuri corecte. Datorită achiziționării constante de vehicule, avem mereu piese noi în stoc. Întrebați – de multe ori avem exact piesa potrivită pentru vehiculul dumneavoastră."
+    },
+    "tireService": {
+      "title": "Schimb de\nanvelope",
+      "description": "Fie că este vorba de schimbul sezonier de la anvelope de vară la cele de iarnă sau invers – ne ocupăm de schimbul complet al anvelopelor. De asemenea, montăm anvelope noi și le echilibrăm profesional. Rapid, fiabil și la prețuri corecte. Programați-vă și plecați cu setul potrivit de anvelope."
+    }
+  },
+  "sectionListings": {
+    "title": "Anunțuri",
+    "details": "Detalii",
+    "image": "Imagine"
+  },
+  "imageSlider": {
+    "image": "Imaginea {number}",
+    "previousImage": "Imaginea anterioară",
+    "nextImage": "Imaginea următoare"
+  }
+}

@@ -37,11 +37,29 @@ const FlagPL = () => (
   </svg>
 )
 
+const FlagRO = () => (
+  <svg viewBox="0 0 32 32" width="100%" height="100%">
+    <rect width="11" height="32" fill="#002B7F" />
+    <rect x="11" width="10" height="32" fill="#FCD116" />
+    <rect x="21" width="11" height="32" fill="#CE1126" />
+  </svg>
+)
+
+const FlagHR = () => (
+  <svg viewBox="0 0 32 32" width="100%" height="100%">
+    <rect width="32" height="11" fill="#FF0000" />
+    <rect y="11" width="32" height="10" fill="#fff" />
+    <rect y="21" width="32" height="11" fill="#171796" />
+  </svg>
+)
+
 const languages = [
   { code: "de", label: "Deutsch", flag: <FlagDE /> },
   { code: "ru", label: "Русский", flag: <FlagRU /> },
   { code: "en", label: "English", flag: <FlagGB /> },
   { code: "pl", label: "Polski", flag: <FlagPL /> },
+  { code: "ro", label: "Română", flag: <FlagRO /> },
+  { code: "hr", label: "Hrvatski", flag: <FlagHR /> },
 ]
 
 interface Props {

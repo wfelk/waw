@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "description": "Rabljeni automobili, havarirana vozila, auto dijelovi & izmjena guma"
+  },
+  "sideMenu": {
+    "openMenu": "Otvori izbornik",
+    "closeMenu": "Zatvori izbornik",
+    "aboutUs": "O nama",
+    "services": "Usluge",
+    "listings": "Oglasi"
+  },
+  "sectionStart": {
+    "tagline1": "Rabljeni automobili",
+    "tagline2": "Havarirana vozila",
+    "tagline3": "Auto dijelovi",
+    "tagline4": "Izmjena guma",
+    "viewListings": "Oglasi",
+    "call": "Nazovi",
+    "sendEmail": "Pošalji e-mail",
+    "sendMessage": "Pošalji poruku",
+    "vehicleAlt": "Vozilo"
+  },
+  "sectionAboutUs": {
+    "title": "O nama",
+    "welcome": "Dobrodošli u",
+    "companyName": "WAW Automobile",
+    "tagline": "– vaš stručnjak za mobilnost s drugom šansom.",
+    "description": "Ono što je počelo kao mala strast prema motorima, godinama je izraslo u svestrano obiteljsko poduzeće. Vjerujemo da svako vozilo ima vrijednost – bilo da blista u salonu ili mu je potrebna druga šansa nakon nesreće."
+  },
+  "sectionServices": {
+    "title": "Usluge",
+    "image": "Slika",
+    "usedCars": {
+      "title": "Rabljeni automobili:\nKupnja & Prodaja",
+      "description": "Kupujemo i prodajemo rabljene automobile svih vrsta. Bilo da tražite ekonomičan gradski auto, pouzdan karavan za obitelj ili robusno vozilo za komercijalnu upotrebu – nudimo raznolik izbor. Želite prodati svoje vozilo? Dat ćemo vam poštenu ponudu – brzo i bez komplikacija."
+    },
+    "accidentCars": {
+      "title": "Havarirana vozila:\nKupnja & Prodaja",
+      "description": "Kupujemo i prodajemo havarirana i neispravna vozila. Imate oštećen automobil? Preuzet ćemo ga po poštenoj cijeni. Istovremeno nudimo havarirana i neispravna vozila na prodaju – idealna za iskorištavanje dijelova, hobiste ili izvoz. Iskrena procjena stanja je zajamčena."
+    },
+    "vehicleParts": {
+      "title": "Auto\ndijelovi",
+      "description": "Bilo da se radi o motorima, mjenjačima, dijelovima karoserije ili elektronici – nudimo širok asortiman rabljenih auto dijelova po poštenim cijenama. Zahvaljujući stalnom otkupu vozila, kontinuirano imamo nove dijelove na zalihi. Samo pitajte – često imamo upravo pravi dio za vaše vozilo."
+    },
+    "tireService": {
+      "title": "Izmjena\nguma",
+      "description": "Bilo da se radi o sezonskoj zamjeni ljetnih za zimske gume ili obrnuto – obavljamo kompletnu izmjenu guma za vas. Također montiramo nove gume i profesionalno ih balansiramo. Brzo, pouzdano i po poštenim cijenama. Jednostavno zakažite termin i odvezite se s pravim setom guma."
+    }
+  },
+  "sectionListings": {
+    "title": "Oglasi",
+    "details": "Detalji",
+    "image": "Slika"
+  },
+  "imageSlider": {
+    "image": "Slika {number}",
+    "previousImage": "Prethodna slika",
+    "nextImage": "Sljedeća slika"
+  }
+}
