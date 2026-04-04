@@ -58,5 +58,16 @@
     "image": "Bild {number}",
     "previousImage": "Vorheriges Bild",
     "nextImage": "Nächstes Bild"
+  },
+  "admin": {
+    "title": "WAW Admin",
+    "username": "Nutzername",
+    "password": "Kennwort",
+    "submit": "Anmelden",
+    "submitting": "Anmeldung...",
+    "errorCredentials": "Ungültiger Benutzername oder Passwort.",
+    "errorNotConfigured": "Admin-Zugangsdaten sind nicht konfiguriert.",
+    "logout": "Abmelden",
+    "placeholder": "Dashboard — Fahrzeugverwaltung kommt in Kürze."
   }
 }

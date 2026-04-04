@@ -2,6 +2,7 @@
 
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
+import { getLocale, getTranslations } from "next-intl/server"
 
 export const login = async (
   _prevState: { error: string } | null,
@@ -9,16 +10,18 @@ export const login = async (
 ) => {
   const username = formData.get("username") as string
   const password = formData.get("password") as string
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: "admin" })
 
   const validUsername = process.env.ADMIN_USERNAME
   const validPassword = process.env.ADMIN_PASSWORD
 
   if (!validUsername || !validPassword) {
-    return { error: "Admin credentials are not configured." }
+    return { error: t("errorNotConfigured") }
   }
 
   if (username !== validUsername || password !== validPassword) {
-    return { error: "Invalid username or password." }
+    return { error: t("errorCredentials") }
   }
 
   const cookieStore = await cookies()
@@ -27,16 +30,17 @@ export const login = async (
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     maxAge: 60 * 60 * 24, // 24 hours
-    path: "/admin",
+    path: "/",
   })
 
-  redirect("/admin")
+  redirect(`/${locale}/admin`)
 }
 
 export const logout = async () => {
+  const locale = await getLocale()
   const cookieStore = await cookies()
   cookieStore.delete("admin-session")
-  redirect("/admin/login")
+  redirect(`/${locale}/admin/login`)
 }
 
 export const isAuthenticated = async (): Promise<boolean> => {
