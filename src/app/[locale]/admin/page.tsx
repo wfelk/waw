@@ -24,7 +24,6 @@ const AdminContent = () => {
         <div className="mb-8 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-white">{t("title")}</h1>
           <div className="flex items-center gap-3">
-            <AdminLanguageSwitcher />
             <form action={logout}>
               <button
                 type="submit"
@@ -33,6 +32,7 @@ const AdminContent = () => {
                 {t("logout")}
               </button>
             </form>
+            <AdminLanguageSwitcher />
           </div>
         </div>
 
