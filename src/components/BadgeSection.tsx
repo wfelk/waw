@@ -3,7 +3,7 @@ interface Props {
   className?: string
 }
 
-export const SectionBadge = ({ title, className = "mb-8" }: Props) => {
+export const BadgeSection = ({ title, className = "mb-8" }: Props) => {
   return (
     <div
       className={`max-w-full rounded-component bg-primary px-6 py-3 shadow-[0px_3px_9.7px_2px_rgba(0,0,0,0.26)] tablet:px-14 tablet:py-4 ${className}`}

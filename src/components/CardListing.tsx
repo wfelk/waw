@@ -9,7 +9,7 @@ interface Props {
   color: string
 }
 
-export const ListingCard = ({ title, year, km, price, color }: Props) => {
+export const CardListing = ({ title, year, km, price, color }: Props) => {
   const t = useTranslations("sectionListings")
 
   return (

@@ -5,7 +5,7 @@ interface Props {
   color: string
 }
 
-export const ServiceCard = ({ serviceKey, color }: Props) => {
+export const CardService = ({ serviceKey, color }: Props) => {
   const t = useTranslations("sectionServices")
 
   return (

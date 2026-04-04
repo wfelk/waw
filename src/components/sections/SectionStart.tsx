@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 import { Phone, Mail } from "lucide-react"
-import { SideMenu } from "@/components/SideMenu"
+import { MenuSide } from "@/components/MenuSide"
 import { Button } from "@/components/Button"
 import { IconWhatsApp } from "@/components/icons/IconWhatsApp"
 import { IconTelegram } from "@/components/icons/IconTelegram"
@@ -21,7 +21,7 @@ export const SectionStart = () => {
             priority
           />
         </div>
-        <SideMenu />
+        <MenuSide />
       </header>
 
       <section

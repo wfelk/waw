@@ -4,9 +4,9 @@ import { useState, useEffect, useSyncExternalStore } from "react"
 import { createPortal } from "react-dom"
 import { useTranslations } from "next-intl"
 import { Menu, X } from "lucide-react"
-import { LanguageSwitcher } from "@/components/LanguageSwitcher"
+import { SwitcherLanguage } from "@/components/SwitcherLanguage"
 
-export const SideMenu = () => {
+export const MenuSide = () => {
   const t = useTranslations("sideMenu")
   const [isOpen, setIsOpen] = useState(false)
   const isMounted = useSyncExternalStore(
@@ -56,7 +56,7 @@ export const SideMenu = () => {
 
         {/* Language switcher — tablet and wider */}
         <div className="hidden tablet:block">
-          <LanguageSwitcher variant="desktop" />
+          <SwitcherLanguage variant="desktop" />
         </div>
 
         {/* Mobile-only hamburger button */}
@@ -112,7 +112,7 @@ export const SideMenu = () => {
 
               {/* Language switcher — mobile only */}
               <div className="mt-auto bg-gray-200 tablet:hidden">
-                <LanguageSwitcher
+                <SwitcherLanguage
                   variant="mobile"
                   onSelect={() => setIsOpen(false)}
                 />

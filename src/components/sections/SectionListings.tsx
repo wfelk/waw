@@ -1,8 +1,8 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { SectionBadge } from "@/components/SectionBadge"
-import { ListingCard } from "@/components/ListingCard"
+import { BadgeSection } from "@/components/BadgeSection"
+import { CardListing } from "@/components/CardListing"
 
 const MOCK_LISTINGS = [
   {
@@ -63,11 +63,11 @@ export const SectionListings = () => {
       id="listings"
       className="flex flex-col items-center bg-gray-100 px-6 py-12 tablet:px-12 tablet:py-16 desktop:px-20 desktop:py-20"
     >
-      <SectionBadge title={t("title")} />
+      <BadgeSection title={t("title")} />
 
       <div className="section-content grid grid-cols-1 gap-5 tablet:grid-cols-2 tablet:gap-6 desktop:grid-cols-3 desktop:gap-8">
         {MOCK_LISTINGS.map((car) => (
-          <ListingCard
+          <CardListing
             key={car.id}
             title={car.title}
             year={car.year}

@@ -17,7 +17,7 @@ const PLACEHOLDER_COLORS = [
   "#2d3748",
 ]
 
-export const ImageSlider = () => {
+export const SliderImage = () => {
   const t = useTranslations("imageSlider")
   const [current, setCurrent] = useState(0)
   const [dragOffset, setDragOffset] = useState(0)

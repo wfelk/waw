@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl"
-import { SectionBadge } from "@/components/SectionBadge"
-import { ServiceCard } from "@/components/ServiceCard"
+import { BadgeSection } from "@/components/BadgeSection"
+import { CardService } from "@/components/CardService"
 
 const SERVICES = [
   { key: "usedCars", color: "#4b5563" },
@@ -17,11 +17,11 @@ export const SectionServices = () => {
       id="service"
       className="flex flex-col items-center bg-[#565656] px-6 py-12 tablet:px-12 tablet:py-16 desktop:px-20 desktop:py-20"
     >
-      <SectionBadge title={t("title")} className="mb-10" />
+      <BadgeSection title={t("title")} className="mb-10" />
 
       <div className="section-content grid grid-cols-1 gap-10 tablet:grid-cols-2">
         {SERVICES.map((service) => (
-          <ServiceCard
+          <CardService
             key={service.key}
             serviceKey={service.key}
             color={service.color}

@@ -67,7 +67,7 @@ interface Props {
   onSelect?: () => void
 }
 
-export const LanguageSwitcher = ({ variant, onSelect }: Props) => {
+export const SwitcherLanguage = ({ variant, onSelect }: Props) => {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
